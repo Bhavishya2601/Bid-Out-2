@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/payment.css">
+</head>
+
+<body>
+    <header>
+        <img src="https://cdn.logojoy.com/wp-content/uploads/2018/05/30160306/447.png">
+    </header>
+    <main>
+        <div class="outer_margin">
+            <div class="date_time">
+                <b>MERCHANT</b>: Online Auction
+                <div id="time"></div>
+            </div>
+            <div class="outer_box">
+                <div class="heading">Payment mode</div>
+                <div class="main">
+                    <div class="method">
+                        <button class="color-button" onclick="myFunction_gsm('1');changeColor(this)"
+                            style="background-color: rgb(255, 222, 194);;">Cash</button>
+                        <button class="color-button" onclick="myFunction_gsm('2');changeColor(this)">Cheque / DD</button>
+                        <button class="color-button" onclick="myFunction_gsm('3');changeColor(this)">NetBanking</button>
+                        <button class="color-button" onclick="myFunction_gsm('4');changeColor(this)">Debit card</button>
+                        <button class="color-button" onclick="myFunction_gsm('5');changeColor(this)">Credit card</button>
+                    </div>
+                    <div class="payment" id="1">
+                        <div>
+                            <table>
+                                <tr>
+                                    <td style="width: 200px;">Transaction ID:</td>
+                                    <td style="width: 500px;">20031164915757</td>
+                                </tr>
+                                <tr>
+                                    <td>Merchant Name:</td>
+                                    <td>Online Auction</td>
+                                </tr>
+                                <tr>
+                                    <td>Amount:</td>
+                                    <td>*****</td>
+                                </tr>
+                                <tr>
+                                    <td>Convenience fees:</td>
+                                    <td>*****</td>
+                                </tr>
+                                <tr>
+                                    <td>Service Tax:</td>
+                                    <td>*****</td>
+                                </tr>
+                                <tr>
+                                    <td>Total Bill Amount:</td>
+                                    <td><span style="background-color: rgb(255, 0, 0); color: white;">*****</span></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="buttons">
+                            <button>Generate Challan</button>
+                            <button style="margin-left: 10px;">Back</button>
+                        </div>
+                        <hr style="border: 1px dashed black;">
+                        <div>
+                            <p style="font-size: 20px;">Notes:</p>
+                            <ul style="margin-left: 20px;">
+                                <li>Contents displayed on the page will be deemed as varified by you.</li>
+                                <li>Selection of cash deposit option will disable other payment options</li>
+                                <li>Cash deposit can be done during business hours on working day.</li>
+                                <li>Cash deposit made at the branch will be credited on the same day.</li>
+                                <li>Cash deposit as an option is available for payment upto Rs.3,00,000/- only.</li>
+                                <li>Please take printout of the deposit slip prior to visiting our branch.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="payment" id="2" style="display: none;">
+                        <div>
+                            <table>
+                                <tr>
+                                    <td style="width: 200px;">Transaction ID:</td>
+                                    <td style="width: 500px;">20031164915757</td>
+                                </tr>
+                                <tr>
+                                    <td>Merchant Name:</td>
+                                    <td>Online Auction</td>
+                                </tr>
+                                <tr>
+                                    <td>Amount:</td>
+                                    <td>*****</td>
+                                </tr>
+                                <tr>
+                                    <td>Convenience fees:</td>
+                                    <td>*****</td>
+                                </tr>
+                                <tr>
+                                    <td>Service Tax:</td>
+                                    <td>*****</td>
+                                </tr>
+                                <tr>
+                                    <td>Total Bill Amount:</td>
+                                    <td><span style="background-color: rgb(255, 0, 0); color: white;">*****</span></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div style="padding-top: 50px;">
+                            <div class="column">
+                                <div class="column2">Drawer Name: </div>
+                                <div>
+                                    <input class="column1" type="text">
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="column2">Drawee Name: </div>
+                                <div>
+                                    <p class="column1" style="text-align: center;padding-top: 5px;height: 30px;">ONLINE
+                                        AUCTION</p>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="column2">Cheque/ DD Date:</div>
+                                <div>
+                                    <input class="column1" type="date">
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="column2">Cheque/ DD Number: </div>
+                                <div>
+                                    <input class="column1" type="number">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="buttons">
+                            <button>Submit</button>
+                            <button style="margin-left: 10px;">Back</button>
+                        </div>
+                    </div>
+                    <div class="payment" id="3" style="display: none;">
+                        <div>
+                            <table>
+                                <tr>
+                                    <td style="width: 200px;">Transaction ID:</td>
+                                    <td style="width: 500px;">20031164915757</td>
+                                </tr>
+                                <tr>
+                                    <td>Merchant Name:</td>
+                                    <td>Online Auction</td>
+                                </tr>
+                                <tr>
+                                    <td>Amount:</td>
+                                    <td>*****</td>
+                                </tr>
+                                <tr>
+                                    <td>Convenience fees:</td>
+                                    <td>*****</td>
+                                </tr>
+                                <tr>
+                                    <td>Service Tax:</td>
+                                    <td>*****</td>
+                                </tr>
+                                <tr>
+                                    <td>Total Bill Amount:</td>
+                                    <td><span style="background-color: rgb(255, 0, 0); color: white;">*****</span></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div style="padding-top: 50px;">
+                            <div class="column">
+                                <div class="column2">Mobile No.: </div>
+                                <div>
+                                    <input class="column1" type="text" placeholder="optional">
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="column2">Email ID: </div>
+                                <div>
+                                    <input class="column1" type="text" placeholder="optional">
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="column2">Payer Name: </div>
+                                <div>
+                                    <input class="column1" type="text" placeholder="optional">
+                                </div>
+                            </div>
+                        </div>
+                        <p style="color: rgb(255, 64, 0);font-weight: bold; padding-left: 5px;">*please provide the
+                            mobile number for transaction communication & viewing transaction history</p>
+                        <div class="buttons">
+                            <button>Proceed Now</button>
+                            <button style="margin-left: 10px;">Cancel</button>
+                        </div>
+
+                    </div>
+                    <div class="payment" id="4" style="display: none;">
+                        <div>
+                            <table>
+                                <tr>
+                                    <td style="width: 200px;">Transaction ID:</td>
+                                    <td style="width: 500px;">20031164915757</td>
+                                </tr>
+                                <tr>
+                                    <td>Merchant Name:</td>
+                                    <td>Online Auction</td>
+                                </tr>
+                                <tr>
+                                    <td>Amount:</td>
+                                    <td>*****</td>
+                                </tr>
+                                <tr>
+                                    <td>Convenience fees:</td>
+                                    <td>*****</td>
+                                </tr>
+                                <tr>
+                                    <td>Service Tax:</td>
+                                    <td>*****</td>
+                                </tr>
+                                <tr>
+                                    <td>Total Bill Amount:</td>
+                                    <td><span style="background-color: rgb(255, 0, 0); color: white;">*****</span></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div style="padding-top: 50px;">
+                            <p style="padding-left: 20px; padding-bottom: 20px;">Enter ICICI credit card details</p>
+                            <div class="column">
+                                <div class="column2">Card No.: </div>
+                                <div>
+                                    <input class="column1" type="text">
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="column2">PIN: </div>
+                                <div>
+                                    <input class="column1" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <button>Proceed Now</button>
+                            <button style="margin-left: 10px;">Back</button>
+                        </div>
+                    </div>
+                    <div class="payment" id="5" style="display: none;">
+                        <div>
+                            <table>
+                                <tr>
+                                    <td style="width: 200px;">Transaction ID:</td>
+                                    <td style="width: 500px;">20031164915757</td>
+                                </tr>
+                                <tr>
+                                    <td>Merchant Name:</td>
+                                    <td>Online Auction</td>
+                                </tr>
+                                <tr>
+                                    <td>Amount:</td>
+                                    <td>*****</td>
+                                </tr>
+                                <tr>
+                                    <td>Convenience fees:</td>
+                                    <td>*****</td>
+                                </tr>
+                                <tr>
+                                    <td>Service Tax:</td>
+                                    <td>*****</td>
+                                </tr>
+                                <tr>
+                                    <td>Total Bill Amount:</td>
+                                    <td><span style="background-color: rgb(255, 0, 0); color: white;">*****</span></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="buttons">
+                            <button>Proceed Now</button>
+                            <button style="margin-left: 10px;">Back</button>
+                        </div>
+                        <hr style="border: 1px dashed black;">
+                        <div>
+                            <p style="font-size: 20px;">Notes:</p>
+                            <ul style="margin-left: 20px;">
+                                <li>Contents displayed on the page will be deemed as varified by you.</li>
+                                <li>You must be having valid debit card available with you for payment through this
+                                    mode.</li>
+                                <li>Selection of credit card option will disable other payment options</li>
+                                <li>Any refund/ claim will not be possible post successful payment and reciept
+                                    generation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="../styles/script.js"></script>
+</html>

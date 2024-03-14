@@ -1,0 +1,90 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header img{
+    padding: 15px 120px;
+    width: 150px;
+    height: 70px;
+}
+header{
+    height: 100px;
+    background-color: rgb(255, 111, 0);
+}
+.outer_margin{
+    margin: 0 150px;
+}
+.date_time{
+    text-align: right;
+    color: rgb(212, 81, 0);
+}
+.outer_box{
+    border: 5px solid rgb(152, 152, 152);
+    padding: 20px 30px;
+}
+.heading{
+    font-size: 25px;
+    color: rgb(255, 85, 0);
+    font-weight: bold;
+}
+.main{
+    display: flex;
+    flex-direction: row;
+}
+.method{
+    display: flex;
+    flex-direction: column;
+}
+.method button{
+    width: 200px;
+    height: 50px;
+    margin-top: 2px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(231, 230, 230);
+}
+.payment{
+    margin: 20px 20px;
+    padding: 15px 15px;
+    border: 3px solid rgb(165, 165, 165);
+    width: 100%;
+}
+td{
+    border: 2px solid rgb(165, 165, 165);
+    padding: 5px 5px;   
+}
+.buttons button{
+    width: 150px;
+    height: 30px;
+    color: white;
+    background-color: rgb(255, 111, 0);
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.buttons{
+    padding: 10px 20px;
+}
+.column{
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+    justify-content: right;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+.column2{
+    padding-top: 8px;
+    padding-right: 10px;
+}
+.column1{
+    border: 2px solid rgb(255, 111, 0);
+    width: 500px;
+    height: 35px;
+    border-radius: 5px;
+}
+.column input, .column p{
+    font-size: 20px;
+    padding-left: 10px;
+}

@@ -1,0 +1,452 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+header {
+    /* position: fixed; */
+    overflow: hidden;
+    height: 100px;
+    width: 100%;
+    background-color: white;
+    top: 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav1 {
+    display: flex;
+    justify-content: space-between;
+    /* background-color: yellow; */
+    width: 60%;
+
+}
+
+.nav1 a {
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+}
+.home a{
+    color: rgb(219, 55, 101);
+}
+.nav1 a:hover {
+    color: rgb(219, 55, 101);
+}
+
+.nav2 {
+    /* background-color: cyan; */
+    width: 10%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.nav2 button{
+    /* color: white; */
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 1px solid #888888;
+    /* border: none; */
+    font-weight: bold;
+    /* background-color: rgb(219, 55, 101); */
+    background-color: white;
+    /* color: rgb(219, 55, 101); */
+    color: rgb(49, 50, 54);
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+.nav2 button:hover{
+    background-color: rgb(219, 55, 101);
+    /* background-color: rgb(49, 50, 54); */
+    color: white;
+}
+.account{
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+.account:hover{
+    color: rgb(219, 55, 101);
+}
+.nav1,
+.nav2 {
+    padding: 30px 0;
+    font-size: 20px;
+}
+
+.search {
+    color: rgb(219, 55, 101);
+    cursor: pointer;
+}
+
+/* code for fullscreen search */
+.overlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.overlay-content {
+    position: relative;
+    /* display: flex; */
+    top: 46%;
+    width: 80%;
+    text-align: center;
+    margin-top: 30px;
+    margin: auto;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    cursor: pointer;
+    color: white;
+}
+
+.overlay .closebtn:hover {
+    color: #ccc;
+}
+
+.overlay input[type=text] {
+    padding: 15px;
+    font-size: 17px;
+    border: none;
+    float: left;
+    width: 80%;
+    background: white;
+}
+
+.overlay input[type=text]:hover {
+    background: #f1f1f1;
+}
+
+.overlay button {
+    float: left;
+    width: 20%;
+    padding: 15px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.overlay button:hover {
+    background: #bbb;
+}
+footer {
+    font-family: inconsolata;
+}
+/* end */
+/* 
+.fix {
+    position: fixed;
+    padding: 20px 10px;
+    /* background-color: red; 
+    width: 18%;
+    height: 100%;
+}
+
+.fix div {
+    padding-left: 10px;
+} */
+.banner img {
+    width: 100%;
+}
+.highlight{
+    margin-left: 120px;
+    font-size: 25px;
+    padding-top: 20px;
+}
+.browse-box {
+    padding: 0 150px;
+    padding-bottom: 20px;
+    /* padding: 0 20px; */
+}
+
+.browse1{
+    background-color: white;
+    padding: 30px 25px;
+    margin: 20px 5px;
+    border-radius: 20px;
+    /* height: 150px; */
+    cursor: pointer;
+    box-shadow: 2px 2px 10px #888888;
+}
+.browse1 a{
+    text-decoration: none;
+    color: black;
+}
+.browse1 img{
+    height: 85px;
+}
+.browse1b{
+    font-size: 20px;
+}
+.browse1 a:hover{
+    color: rgb(219, 55, 101);
+}
+.car {
+    background-image: url('../images/background_images/bg-car.png');
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+}
+
+.art {
+    background-image: url('../images/background_images/bg-art.png');
+    background-size: contain;
+}
+
+.watch {
+    background-image: url('../images/background_images/bg-watch.png');
+    background-size: contain;
+}
+
+.estate {
+    background-image: url('../images/background_images/bg-estate.png');
+    background-size: contain;
+    /* background-repeat: no-repeat; */
+}
+
+.car,
+.watch,
+.estate,
+.art,
+.upcoming {
+    /* background-color: yellow; */
+    padding: 10px 0 30px 0;
+    margin-bottom: 50px;
+}
+
+.scroll {
+    /* position: absolute; */
+    /* width: 75%; */
+    /* height: 100px; */
+    /* padding-top: 10px; */
+    /* margin-left: 18%; */
+    padding: 1rem 3.2rem;
+}
+
+.main {
+    background-color: #F3F6FD;
+    /* margin-top: 100px; */
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.head-a {
+    display: flex;
+}
+
+.head-b {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.head-bi {
+    color: #888888;
+}
+
+.head button {
+    padding: 11px 30px;
+    border-radius: 20px;
+    font-size: 20px;
+    background-color: rgb(219, 55, 101);
+    color: white;
+    border: none;
+    /* border: 1px solid rgb(175, 174, 174); */
+}
+
+/* .head button:hover{ */
+/* background-image: linear-gradient(180deg,rgb(219, 55, 101), rgb(255, 196, 213)); */
+/* color: white; */
+/* } */
+.imgBox {
+    /* display: inline-block; */
+    overflow: hidden;
+}
+
+.imgBox img {
+    /* display: block; */
+    transition: .5s ease-in-out;
+}
+
+.a1:hover img,
+.imgBox:hover img {
+    transform: scale(1.15);
+}
+
+.auction {
+    margin-top: 50px;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-around;
+}
+
+.a1 {
+    /* height: 550px; */
+    /* color: rgb(219, 55, 101); */
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px 5px;
+    text-align: center;
+    /* height: 550px; */
+    /* font-size: 27px; */
+    width: 30%;
+    box-shadow: 5px 10px 18px #888888;
+}
+
+.a1 img {
+    height: 350px;
+    width: 100%;
+    /* height: auto; */
+    border-radius: 20px;
+}
+
+.a1_description {
+    color: #888888;
+    font-size: 15px;
+}
+
+.a1_head {
+    /* text-align: left; */
+    font-weight: 500;
+    /* padding-left: 30px; */
+    font-size: 22px;
+    text-align: center;
+}
+
+.a1_timer {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    color: rgb(219, 55, 101);
+    /* margin-left: 100px; */
+    font-size: 20px;
+    padding-top: 30px;
+}
+
+.timer {
+    padding-left: 5px;
+}
+
+.a1_bid {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 5px;
+    margin-bottom: 20px;
+}
+
+.a1_bid button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 15px;
+    border: none;
+    /* background-image: linear-gradient(180deg, rgb(219, 55, 101), rgb(255, 196, 213)); */
+    background-color: rgb(219, 55, 101);
+    color: white;
+    cursor: pointer;
+}
+
+/* .user_bid{
+    font-size: 20px;
+    padding: 5px 0;
+}
+.user_bid input{
+    border: none;
+    background-color: rgb(204, 204, 204);
+    padding: 5px 5px;
+    border-radius: 10px;
+} */
+.upcom {
+    /* filter: blur(3px); */
+    height: 400px;
+}
+
+.upcom img {
+    height: 300px;
+}
+.footer1 {
+    background-color: rgb(49, 50, 54);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+.foot1,
+.foot2 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#email {
+    border-radius: 20px;
+    width: 200px;
+    height: 32px;
+    padding-left: 5px;
+}
+
+.submit {
+    background-color: rgb(219, 55, 101);
+    padding: 5px 5px 5px 5px;
+    width: 80px;
+    border-radius: 50px;
+    color: white;
+    border: none;
+}
+
+.footer2 {
+    background-color: rgb(49, 50, 54);
+    color: white;
+}
+
+.foot3 {
+    padding-left: 20px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.foot3 li {
+    display: inline;
+    margin-right: 20px;
+    padding-left: 20px;
+}
+
+.foot3 a {
+    text-decoration: none;
+    color: white;
+}
+
+#copy {
+    padding-left: 335px;
+}
+
+.fa-facebook,
+.fa-instagram,
+.fa-twitter,
+.fa-linkedin,
+.fa-github {
+    padding: 8px 8px;
+    text-decoration: none;
+    color: white;
+    height: 20px;
+}

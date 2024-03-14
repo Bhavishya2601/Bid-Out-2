@@ -1,25 +1,437 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#ffffff" />
-    <link rel="icon" type="image/x-icon" href="favicon.png">
-    <title>Bid out</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/icons/favicon.ico" type="image/x-icon">
+    <title>Bid Out - The Best Online Auction Website for 2024</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+</head>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+<body>
+    <div class="start">
+        <header class="poppins-light">
+            <div class="nav">
+                <div style="padding-top: 8px; padding-left: 10px;">
+                    <img src="images/images/logo.png" alt="">
+                </div>
+                <div class="nav1">
+                    <div class="home"><a href="index.html">Home</a></div>
+                    <div><a href="pages/about.html">About us</a></div>
+                    <div><a href="pages/product.html">Browse product</a></div>
+                    <div><a href="#">Gallery</a></div>
+                    <div><a href="#">Blog</a></div>
+                    <div><a href="pages/contact.html">Contact</a></div>
+                </div>
+                <div class="nav2">
+                    <div>
+                        <span class="material-symbols-outlined search" onclick="openSearch()" style="padding-top: 10px;">search</span>
+                    </div>
+                    <!-- code for fullscreen search -->
+                    <div id="myOverlay" class="overlay">
+                        <span class="closebtn" onclick="closeSearch()" title="Close Overlay">x</span>
+                        <div class="overlay-content">
+                            <div><input type="text" placeholder="Search.." name="search" style="width: 55vw;"></div>
+                            <div><button type="submit"><i class="fa fa-search"></i></button></div>
+                        </div>
+                    </div>
+                    <!-- end -->
+                    <div>
+                        <a href="/Login" target="_blank"><button>Log In</button></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="nav-a">
+            <div class="nav_left">
+                <div class="nav_1 poppins-light">Welcome to Auction House</div>
+                <div class="nav_2">Build, Sell & Collect Digital Items.</div>
+                <div class="nav_3 poppins-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae
+                    dolorem reprehenderit unde aliquid ducimus eligendi explicabo dolorum. Eius, delectus eum.</div>
+                <div><a href="pages/product.html"><button>START EXPLORING</button></a></div>
+            </div>
+            <div class="nav_right">
+                <div class="right1"><img src="images/background_images/banner_girl.png"></div>
+                <span class="right2"><img src="images/icons/1.png"></span>
+                <div class="right3"><img src="images/icons/2.png"></div>
+                <div class="right4"><img src="images/icons/3.png"></div>
+            </div>
+        </div>
+    </div>
+    <!-- background image should be slightly darkened or blured and the image should be in the center -->
+    <div class="icons">
+        <div class="splide" id="icons_slide">
+            <div class="splide__track">
+                <div class="splide__list">
+                    <div class="splide__slide">
+                        <div class="box-icons icon1">
+                            <img src="images/icons/icon1.png" style="position: absolute; margin-left: 15px;">
+                        </div>
+                    </div>
+                    <div class="splide__slide">
+                        <div class="box-icons icon2">
+                            <img src="images/icons/icon2.png">
+                        </div>
+                    </div>
+                    <div class="splide__slide">
+                        <div class="box-icons icon3">
+                            <img src="images/icons/icon3.png" style="position: absolute; margin-left: 15px;">
+                        </div>
+                    </div>
+                    <div class="splide__slide">
+                        <div class="box-icons icon4">
+                            <img src="images/icons/icon4.png" style="position: absolute; margin-left: 15px;">
+                        </div>
+                    </div>
+                    <div class="splide__slide">
+                        <div class="box-icons icon5">
+                            <img src="images/icons/icon5.png" style="position: absolute; margin-left: 10px; height: 110px;">
+                        </div>
+                    </div>
+                    <div class="splide__slide">
+                        <div class="box-icons icon6">
+                            <img src="images/icons/icon6.png" style="position: absolute; margin-left: 10px; top: 25px; ">
+                        </div>
+                    </div>
+                    <div class="splide__slide">
+                        <div class="box-icons icon7">
+                            <img src="images/icons/icon7.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="poppins-light">
+        <div class="art">
+            <div class="head">
+                <div class="head-a">
+                    <div class="head-b">Live Auction</div>
+                    <div>Explore on the world's best & largest Bidding marketplace with our beautiful Bidding</div>
+                    <div>products. We want to be a part of your smile, success and future growth.
+                    </div>
+
+                </div>
+                <div>
+                    <a href="pages/product.html"><button>View all</button></a>
+                </div>
+            </div>
+            <div class="auction">
+
+                <div class="a1">
+                    <div class="imgBox"><img src="https://bidout-wp.b-cdn.net/wp-content/uploads/2022/10/Image-14.jpg">
+                    </div>
+                    <div class="a1_head">Couple Wedding Ring</div>
+                    <div class="a1_description">Symbol of love, unity, commitment. Worn by partners to signify eternal bond,in marriage.</div>
+                    <div class="a1_bid">
+                        <div>Current bid: 3,248.0$</div>
+                        <div><a href="pages/product.html"><button>Place your Bid</button></a></div>
+                    </div>
+                </div>
+                <div class="a1">
+                    <div class="imgBox"><img src="images/images/mustang.png">
+                    </div>
+                    <div class="a1_head">Ford Mustang 1965</div>
+                    <div class="a1_description">Iconic American muscle car, epitome of style, power, and performance.</div>
+                    <div class="a1_bid">
+                        <div>Current bid: 10,104.0$</div>
+                        <div><a href="pages/product.html"><button>Place your Bid</button></a></div>
+                    </div>
+                </div>
+                <div class="a1">
+                    <div class="imgBox"><img src="https://bidout-wp.b-cdn.net/wp-content/uploads/2022/10/Image-1.jpg">
+                    </div>
+                    <div class="a1_head">Black Analogue Watch</div>
+                    <div class="a1_description">
+                        Timeless style, precision hands, wrist essential, reliable timekeeping, accessory.</div>
+                    <div class="a1_bid">
+                        <div>Current bid: 840.0$</div>
+                        <div><a href="pages/product.html"><button>Place your Bid</button></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="auction">
+
+                <div class="a1">
+                    <div class="imgBox"><img src="https://bidout-wp.b-cdn.net/wp-content/uploads/2022/10/Image-15.jpg">
+                    </div>
+                    <div class="a1_head">Honda CBR 600 (2022)</div>
+                    <div class="a1_description">Sleek and powerful sportbike known for its agility and performance on the road.</div>
+                    <div class="a1_bid">
+                        <div>Current bid: 3,050.0$</div>
+                        <div><a href="pages/product.html"><button>Place your Bid</button></a></div>
+                    </div>
+                </div>
+                <div class="a1">
+                    <div class="imgBox"><img
+                            src="https://images.unsplash.com/photo-1612965607446-25e1332775ae?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bHV4dXJ5JTIwcmVhbCUyMGVzdGF0ZXxlbnwwfHwwfHx8MA%3D%3D">
+                    </div>
+                    <div class="a1_head">Luxury White Interior in Toronto</div>
+                    <div class="a1_description">Elegance and sophistication, adorning Toronto's landscape with its pristine luxury white interior.
+                    </div>
+                    <div class="a1_bid">
+                        <div>Current bid: 3,620,103.0$</div>
+                        <div><a href="pages/product.html"><button>Place your Bid</button></a></div>
+                    </div>
+                </div>
+                <div class="a1">
+                    <div class="imgBox"><img src="https://bidout-wp.b-cdn.net/wp-content/uploads/2022/10/Image-6.jpg">
+                    </div>
+                    <div class="a1_head">Toyota AIGID A Class Car</div>
+                    <div class="a1_description">Offers cutting-edge technology and sleek design for a premium driving experience.</div>
+                    <div class="a1_bid">
+                        <div>Current bid: 1,030,350.0$</div>
+                        <div><a href="pages/product.html"><button>Place your Bid</button></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="reviews_box">
+            <div class="main-review">What Client Say</div>
+            <div class="explain-review">Explore on the world's best & largest Bidding marketplace with our beautiful
+                Bidding</div>
+            <div class="explain-review" style="margin-bottom: 30px;">products. We want to be a part of your smile,
+                success and future growth.</div>
+            <div class="review-box2">
+                <div class="splide" id="reviews">
+                    <div class="splide__track">
+                        <div class="splide__list">
+                            <div class="splide__slide">
+                                <div class="splide-review">
+                                    <div class="review_head">
+                                        <div class="profile"><img
+                                                src="https://pbs.twimg.com/media/DzeLmXZU0AA1OtZ?format=jpg&name=360x360">
+                                        </div>
+                                        <div><img src="images/icons/review.png"></div>
+                                    </div>
+                                    <div class="review-name">Johan Martin R</div>
+                                    <div class="review-designation">CEO founder</div>
+                                    <br>
+                                    <div class="actual-review">
+                                        The Pacific Grove Chamber of Commerce would like to thank eLab Communications
+                                        and Mr. Will Elkadi for all the efforts that assisted me nicely manners.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="splide__slide">
+                                <div class="splide-review">
+                                    <div class="review_head">
+                                        <div class="profile"><img
+                                                src="https://i.pinimg.com/280x280_RS/be/70/fe/be70fe7ebde5c89c08e49e34ba5f6cc4.jpg">
+                                        </div>
+                                        <div><img src="images/icons/review.png"></div>
+                                    </div>
+                                    <div class="review-name">Johan Dou RO</div>
+                                    <div class="review-designation">Marketing Officer</div>
+                                    <br>
+                                    <div class="actual-review">
+                                        The Pacific Grove Chamber of Commerce would like to thank eLab Communications
+                                        and Mr. Will Elkadi for all the efforts that assisted me nicely manners.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="splide__slide">
+                                <div class="splide-review">
+                                    <div class="review_head">
+                                        <div class="profile"><img
+                                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREi99oalo6ZF3Gaz56o2vjAg7qF_qZl4X0kQ&usqp=CAU">
+                                        </div>
+                                        <div><img src="images/icons/review.png"></div>
+                                    </div>
+                                    <div class="review-name">Martin Luther</div>
+                                    <div class="review-designation">CTO</div>
+                                    <br>
+                                    <div class="actual-review">
+                                        The Pacific Grove Chamber of Commerce would like to thank eLab Communications
+                                        and Mr. Will Elkadi for all the efforts that assisted me nicely manners.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="categories_main">
+            <div class="categories_head">
+                <div style="font-size: 35px; font-weight: bold;">Categories</div>
+                <div>Explore on the world's best & largest Bidding marketplace with our beautiful Bidding</div>
+                <div>products. We want to be a part of your smile, success and future growth.
+                </div>
+            </div>
+            <div>
+                <button>View all</button>
+            </div>
+        </div> 
+        <div class="categories">
+            <div class="splide" id="categories_slide">
+                <div class="splide__track">
+                    <div class="splide__list">
+                        <div class="splide__slide">
+                            <div class="splide-box">
+                                <img src="images/images/car_categories.png">
+                            </div>
+                        </div>
+                        <div class="splide__slide">
+                            <div class="splide-box">
+                                <img src="https://i.ytimg.com/vi/UsvzAPiWEHg/maxresdefault.jpg">
+                            </div>
+                        </div>
+                        <div class="splide__slide">
+                            <div class="splide-box">
+                                <img
+                                    src="https://www.shutterstock.com/image-vector/electronics-text-assorted-devices-floating-260nw-2271252449.jpg">
+                            </div>
+                        </div>
+                        <div class="splide__slide">
+                            <div class="splide-box">
+                                <img src="images/images/real estate.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+
+        <div class="trusted">
+            <div class="trust_head">Trusted By 500+ Businesses</div>
+            <div class="trust_explain">Explore on the world's best & largest Bidding marketplace with our beautiful
+                Bidding </div>
+            <div class="trust_explain">products. We want to be a part of your smile, success and future growth.</div>
+            <div class="trust_company">
+                <div class="trust_company1 imgBox"><img
+                        src="https://img.squadhelp.com/story_images/visual_images/1593290883-nocko%20image1.jpg?class=listing">
+                </div>
+                <div class="trust_company1 imgBox"><img
+                        src="https://img.squadhelp.com/story_images/visual_images/1602321598-WiseFinch2-100.jpg?class=listing">
+                </div>
+                <div class="trust_company1 imgBox"><img
+                        src="https://img.squadhelp.com/story_images/visual_images/1657345504-simanta-100.jpg?class=listing">
+                </div>
+                <div class="trust_company1 imgBox"><img
+                        src="https://img.squadhelp.com/story_images/visual_images/13287589.jpg?class=listing"></div>
+                <div class="trust_company1 imgBox"><img
+                        src="https://cdn.logojoy.com/wp-content/uploads/2018/05/30162605/1236.png"></div>
+                <div class="trust_company1 imgBox"><img
+                        src="https://img.squadhelp.com/story_images/visual_images/11007772.jpg?class=listing"></div>
+            </div>
+            <div class="trust_company">
+                <div class="trust_company1 imgBox"><img
+                        src="https://img.squadhelp.com/story_images/visual_images/1599554979-codegreat.png?class=listing">
+                </div>
+                <div class="trust_company1 imgBox"><img
+                        src="https://img.squadhelp.com/story_images/visual_images/1661580450-lozi.png?class=listing">
+                </div>
+                <div class="trust_company1 imgBox"><img
+                        src="https://img.squadhelp.com/story_images/visual_images/Gadus.png?class=listing"></div>
+                <div class="trust_company1 imgBox"><img
+                        src="https://img.squadhelp.com/story_images/visual_images/1704746614-onevu%201-01.jpg?class=listing">
+                </div>
+                <div class="trust_company1 imgBox"><img
+                        src="https://img.squadhelp.com/story_images/visual_images/1700576711-ChirpIQ%20image1.jpg?class=listing">
+                </div>
+                <div class="trust_company1 imgBox"><img
+                        src="https://img.squadhelp.com/story_images/visual_images/1674731173-SmartBoat_main.png?class=listing">
+                </div>
+            </div>
+        </div>
+
+        <div class="service">
+            <div class="imgBox"><img src="images/images/service1.png"></div>
+            <div class="imgBox"><img src="images/images/service2.png"></div>
+            <div class="imgBox"><img src="images/images/service3.png"></div>
+            <div class="imgBox"><img src="images/images/service4.png"></div>
+        </div>
+
+    </main>
+    <footer class="footer1">
+        <div class="foot1">
+            <p>
+            <h1>CONTACT US</h1>
+            </p><br>
+            <br>
+            <ul type="circle">
+                <li>2130 Fulton Street, Chicago<br> 94117-***** USA</li>
+                <br>
+                <li>1-800-1234-567<br>
+                    1-800-0123-345</li><br>
+                <li>abc123@gmail.com</li><br>
+            </ul>
+            <div class="symbol"><a href="#" class="fa fa-facebook"></a>&ensp;<a href="#"
+                    class="fa fa-instagram"></a>&ensp;<a href="https://twitter.com/bhavishya2601"
+                    class="fa fa-twitter"></a>&ensp;<a href="https://www.linkedin.com/in/bhavishya2601/"
+                    class="fa fa-linkedin" target="_blank"></a>&ensp;<a href="https://github.com/Bhavishya2601"
+                    class="fa fa-github" target="_blank"></a>
+            </div>
+        </div>
+
+        <div class="foot2">
+            <p>
+            <h1>NEWSLETTER</h1>
+            </p>
+            <br><br>
+            Keep up with our always upcoming<br> product features and technologies.<br> Enter your e-mail and subscribe
+            to<br> our newsletter.
+            <br>
+            <br>
+            <center>
+                <input type="email" name="email" placeholder="Enter your E-mail" id="email">
+                <br>
+                <br>
+                <input type="submit" name="Submit" class="submit">
+            </center>
+        </div>
+    </footer>
+    <hr>
+    <footer class="footer2">
+
+        <nav class="foot3">
+            <ul>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">SERVICES</a></li>
+                <li><a href="#">SHOP</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">PORTFOLIO</a></li>
+                <li><a href="#">CONTACTS</a></li>
+                <li id="copy">&copy;2024 Bid Out - Online Auction Platform</li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<script src="styles/script.js"></script>
+<!-- <script>
+    import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import ReactPage from './ReactPage';
+
+function App() {
+  return (
+    <Router>
+      <Switch>
+        <Route path="/react" component={ReactPage} />
+        {/* Add more routes here if needed */}
+      </Switch>
+    </Router>
+  );
+}
+
+export default App;
+</script> -->
 </html>

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ford Mustang 1965 - Bid Out</title>
+    <link rel="stylesheet" href="../styles/description.css">
+    <link rel="shortcut icon" href="../images/icons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header class="poppins-light">
+        <div class="nav">
+            <div style="padding-top: 8px; padding-left: 20px;">
+                <img src="../images/images/logo.png" alt="">
+            </div>
+            <div class="nav1">
+                <div><a href="../index.html">Home</a></div>
+                <div><a href="../pages/about.html">About us</a></div>
+                <div class="home"><a href="../pages/product.html">Browse product</a></div>
+                <div><a href="#">Gallery</a></div>
+                <div><a href="#">Blog</a></div>
+                <div><a href="../pages/contact.html">Contact</a></div>
+            </div>
+            <div class="nav2">
+                <div>
+                    <span class="material-symbols-outlined search" onclick="openSearch()"
+                        style="padding-top: 5px; font-weight: bold;">search</span>
+                </div>
+                <div id="myOverlay" class="overlay">
+                    <span class="closebtn" onclick="closeSearch()" title="Close Overlay">x</span>
+                    <div class="overlay-content">
+                        <div><input type="text" placeholder="Search.." name="search" style="width: 60vw;"></div>
+                        <div><button type="submit" style="border-radius: 0;"><i class="fa fa-search"></i></button></div>
+                    </div>
+                </div>
+                <div>
+                    <a href="/Profile"><span class="material-symbols-outlined account" style="font-size: 30px; font-weight: 500;">
+                        person
+                    </span></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="banner"><img src="../images/background_images/mustang.png"></div>
+    <!-- <section class="product-detail"> -->
+    <div class="container-main">
+        <div class="box" style="margin-left: 50px;">
+
+
+
+            <div class="mySlides imgBox">
+                <!-- <div class="numbertext"></div> -->
+                <img src="../images/images/mustang1.png" class="img1" >
+            </div>
+
+            <div class="mySlides imgBox">
+                <!-- <div class="numbertext"></div> -->
+                <img src="../images/images/mustang2.png" class="img1">
+            </div>
+
+            <div class="mySlides imgBox">
+                <!-- <div class="numbertext"></div> -->
+                <img src="../images/images/mustang3.png" class="img1">
+            </div>
+
+            <div class="mySlides imgBox">
+                <!-- <div class="numbertext"></div> -->
+                <img src="../images/images/mustang4.png" class="img1">
+            </div>
+
+            <div class="small-img">
+                <div class="card">
+                    <img src="../images/images/mustang1.png" onclick="currentSlide(1)">
+                </div>
+                <div class="card">
+                    <img src="../images/images/mustang2.png" onclick="currentSlide(2)">
+                </div>
+                <div class="card">
+                    <img src="../images/images/mustang3.png" onclick="currentSlide(3)">
+                </div>
+                <div class="card">
+                    <img src="../images/images/mustang4.png" onclick="currentSlide(4)">
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="product-details-header">
+                <h2 style="font-size: 50px;">Ford Mustang 1965</h2>
+                <div class="list">
+                    <div>Listing ID: 14076242 </div>
+                    <div> Item #: 7300-3356862 </div>
+                </div>
+            </div>
+
+            <div class="short">
+
+                The 1965 Ford Mustang: An iconic American muscle car that revolutionized the automotive industry with
+                its sporty design and powerful performance.
+            </div>
+
+            <div class="buttons-model">
+                <div class="button1"><a href="3d model/model.html" target="_blank"><button>View 3d Model</button></a>
+                </div>
+                <div class="button2"><button id="readButton">Read Text</button></div>
+            </div>
+
+            <form id="guessForm">
+                <div class="price-table">
+                    <div class="header">
+                        <div>Current Bid:</div>
+                        <div id="output1" class="price">$25,304.0</div>
+                    </div>
+                    <div class="header1">
+                        <div>Item Condition:</div>
+                        <div class="info">NEW</div>
+
+                    </div>
+                    <div class="header1">
+                        <div>Auction ends:</div>
+                        <div class="info"> December 31, 2024 00:00 am</div>
+
+                    </div>
+
+                    <div class="bid_box">
+                        <div class="bid">
+                            <input type="number" id="guessInput" placeholder="Enter Your Bid">
+                            <button type="submit" class="bid_button">Bid</button>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="tab-menu">
+        <div>
+            <div class="menu" onclick="showDescription()">
+                <div class="name">Description</div>
+            </div>
+        </div>
+        <div>
+            <div class="menu" onclick="showReview()">
+                <div class="name">Review</div>
+            </div>
+        </div>
+        <div>
+            <div class="menu" onclick="showProducts()">
+                <div class="name">More Products</div>
+            </div>
+        </div>
+    </div>
+    <div id="descriptionSection">
+        <div class="tab-description" id="text">
+
+            <h2>Description</h2>
+
+            <!-- <h4>How can have anything you ant in life if you ?</h4> -->
+            <p>The 1965 Ford Mustang stands as a timeless emblem of American automotive ingenuity, epitomizing the
+                spirit of the 1960s era. Introduced amidst fervent anticipation, this iconic muscle car not only
+                captured the hearts of enthusiasts but also reshaped the entire automobile landscape. Its sleek and
+                distinctive design, characterized by a long hood and short rear deck, heralded a new era of style
+                and performance. With a range of engine options including the legendary 289 cubic inch V8, the
+                Mustang offered exhilarating power and driving dynamics that set it apart from its contemporaries.
+                Its affordability, coupled with customizable features, made it accessible to a broad spectrum of
+                drivers, further solidifying its status as a cultural icon. Beyond its raw performance, the Mustang
+                symbolized freedom and individuality, embodying the spirit of the open road and the pursuit of
+                automotive excellence. Enduring through generations, the 1965 Ford Mustang remains an enduring
+                symbol of American motoring passion and innovation.</p>
+
+        </div>
+        <!-- </div> -->
+    </div>
+
+
+    <div class="tab-review" id="bidReview" style="display: none">
+        <h2>Review</h2>
+        <form>
+        <div class="review-rating">
+            <div>
+                <h4>Your Rating</h4>
+            </div>
+            <div class="rate">
+                <input type="radio" id="star5" name="rate" value="5" />
+                <label for="star5" title="text">5 stars</label>
+                <input type="radio" id="star4" name="rate" value="4" />
+                <label for="star4" title="text">4 stars</label>
+                <input type="radio" id="star3" name="rate" value="3" />
+                <label for="star3" title="text">3 stars</label>
+                <input type="radio" id="star2" name="rate" value="2" />
+                <label for="star2" title="text">2 stars</label>
+                <input type="radio" id="star1" name="rate" value="1" />
+                <label for="star1" title="text">1 star</label>
+            </div>
+        </div>
+        <textarea id="textArea" class="area" cols="30" rows="10" placeholder="Your Review"></textarea>
+        <button class="review-button">SUBMIT</button>
+        </form>
+    </div>
+
+    <div id="bidProduct" style="display: none;">
+        <div class="art" class="poppins-light">
+            <div class="auction">
+
+                <div class="a1">
+                    <div class="imgBox"><img src="https://bidout-wp.b-cdn.net/wp-content/uploads/2022/10/Image-15.jpg">
+                    </div>
+                    <div class="a1_head">Honda CBR 600 (2022)</div>
+                    <div class="a1_description">Sleek and powerful sportbike known for its agility and performance
+                        on the road.</div>
+                    <div class="a1_bid">
+                        <div>Current bid: 3,050.0$</div>
+                        <div><button>Place your Bid</button></div>
+                    </div>
+                </div>
+                <div class="a1">
+                    <div class="imgBox"><img
+                            src="https://images.unsplash.com/photo-1612965607446-25e1332775ae?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bHV4dXJ5JTIwcmVhbCUyMGVzdGF0ZXxlbnwwfHwwfHx8MA%3D%3D">
+                    </div>
+                    <div class="a1_head">Luxury White Interior in Toronto</div>
+                    <div class="a1_description">Elegance and sophistication, adorning Toronto's landscape with its
+                        pristine luxury white interior.
+                    </div>
+                    <div class="a1_bid">
+                        <div>Current bid: 3,620,103.0$</div>
+                        <div><button>Place your Bid</button></div>
+                    </div>
+                </div>
+                <div class="a1">
+                    <div class="imgBox"><img src="https://bidout-wp.b-cdn.net/wp-content/uploads/2022/10/Image-6.jpg">
+                    </div>
+                    <div class="a1_head">Toyota AIGID A Class Car</div>
+                    <div class="a1_description">Offers cutting-edge technology and sleek design for a premium
+                        driving experience.</div>
+                    <div class="a1_bid">
+                        <div>Current bid: 1,030,350.0$</div>
+                        <div><button>Place your Bid</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="art" class="poppins-light">
+        <div class="head">
+            <div class="head-a">
+                <div class="head-b">Related Products</div>
+            </div>
+            <div>
+                <a href="product-account.html"><button>View all</button></a>
+            </div>
+        </div>
+        <div class="auction">
+
+            <div class="a1">
+                <div class="imgBox"><img src="https://bidout-wp.b-cdn.net/wp-content/uploads/2022/10/Image-14.jpg">
+                </div>
+                <div class="a1_head">Couple Wedding Ring</div>
+                <div class="a1_description">Symbol of love, unity, commitment. Worn by partners to signify eternal bond,
+                    cherished memories, and shared journey in marriage.</div>
+                <div class="a1_bid">
+                    <div>Current bid: 3,248.0$</div>
+                    <div><button>Place your Bid</button></div>
+                </div>
+            </div>
+            <div class="a1">
+                <div class="imgBox"><img
+                        src="https://pixner.net/sbidu/main/assets/images/auction/watches/auction-3.jpg">
+                </div>
+                <div class="a1_head">Lady's Retro Diamond</div>
+                <div class="a1_description">Lady's Retro Diamond is an exquisite vintage-inspired diamond necklace with
+                    timeless elegance and charm.</div>
+                <div class="a1_bid">
+                    <div>Current bid: 2,103.0$</div>
+                    <div><button>Place your Bid</button></div>
+                </div>
+            </div>
+            <div class="a1">
+                <div class="imgBox"><img src="https://bidout-wp.b-cdn.net/wp-content/uploads/2022/10/Image-1.jpg">
+                </div>
+                <div class="a1_head">Black Analogue Watch</div>
+                <div class="a1_description">
+                    Sleek black analogue watch: timeless style, precision hands, classic elegance, wrist essential,
+                    reliable timekeeping, sophisticated accessory.</div>
+                <div class="a1_bid">
+                    <div>Current bid: 840.0$</div>
+                    <div><button>Place your Bid</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer class="footer1">
+        <div class="foot1">
+            <p>
+            <h1>CONTACT US</h1>
+            </p><br>
+            <br>
+            <ul type="circle">
+                <li>2130 Fulton Street, Chicago<br> 94117-***** USA</li>
+                <br>
+                <li>1-800-1234-567<br>
+                    1-800-0123-345</li><br>
+                <li>abc123@gmail.com</li><br>
+            </ul>
+            <div class="symbol"><a href="#" class="fa fa-facebook"></a>&ensp;<a href="#"
+                    class="fa fa-instagram"></a>&ensp;<a href="https://twitter.com/bhavishya2601"
+                    class="fa fa-twitter"></a>&ensp;<a href="https://www.linkedin.com/in/bhavishya2601/"
+                    class="fa fa-linkedin" target="_blank"></a>&ensp;<a href="https://github.com/Bhavishya2601"
+                    class="fa fa-github" target="_blank"></a>
+            </div>
+        </div>
+
+        <div class="foot2">
+            <p>
+            <h1>NEWSLETTER</h1>
+            </p>
+            <br><br>
+            Keep up with our always upcoming<br> product features and technologies.<br> Enter your e-mail and
+            subscribe
+            to<br> our newsletter.
+            <br>
+            <br>
+            <center>
+                <input type="email" name="email" placeholder="Enter your E-mail" id="email">
+                <br>
+                <br>
+                <input type="submit" name="Submit" class="submit">
+            </center>
+        </div>
+    </footer>
+    <hr>
+    <footer class="footer2">
+
+        <nav class="foot3">
+            <ul>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">SERVICES</a></li>
+                <li><a href="#">SHOP</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">PORTFOLIO</a></li>
+                <li><a href="#">CONTACTS</a></li>
+                <li id="copy">&copy;2024 Bid Out - Online Auction Platform</li>
+            </ul>
+        </nav>
+    </footer>
+
+
+
+
+
+</body>
+<script src="../styles/description.js"></script>
+<!-- <script>
+
+    document.getElementById('zoom-img').addEventListener('mousemove', function (e) {
+        const rect = e.target.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const scaleX = e.target.offsetWidth / e.target.width;
+        const scaleY = e.target.offsetHeight / e.target.height;
+
+        const posX = (x - e.target.offsetWidth / 2) * scaleX;
+        const posY = (y - e.target.offsetHeight / 2) * scaleY;
+
+        e.target.style.transformOrigin = `${posX}px ${posY}px`;
+        e.target.classList.add('zoomed');
+    });
+
+    document.getElementById('zoom-img').addEventListener('mouseleave', function () {
+        this.classList.remove('zoomed');
+    });
+
+    document.getElementById('zoom-img1').addEventListener('mousemove', function (e) {
+        const rect = e.target.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const scaleX = e.target.offsetWidth / e.target.width;
+        const scaleY = e.target.offsetHeight / e.target.height;
+
+        const posX = (x - e.target.offsetWidth / 2) * scaleX;
+        const posY = (y - e.target.offsetHeight / 2) * scaleY;
+
+        e.target.style.transformOrigin = `${posX}px ${posY}px`;
+        e.target.classList.add('zoomed');
+    });
+
+    document.getElementById('zoom-img1').addEventListener('mouseleave', function () {
+        this.classList.remove('zoomed');
+    });
+
+
+    document.getElementById('zoom-img2').addEventListener('mousemove', function (e) {
+        const rect = e.target.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const scaleX = e.target.offsetWidth / e.target.width;
+        const scaleY = e.target.offsetHeight / e.target.height;
+
+        const posX = (x - e.target.offsetWidth / 2) * scaleX;
+        const posY = (y - e.target.offsetHeight / 2) * scaleY;
+
+        e.target.style.transformOrigin = `${posX}px ${posY}px`;
+        e.target.classList.add('zoomed');
+    });
+
+    document.getElementById('zoom-img2').addEventListener('mouseleave', function () {
+        this.classList.remove('zoomed');
+    });
+
+
+
+    document.getElementById('zoom-img3').addEventListener('mousemove', function (e) {
+        const rect = e.target.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const scaleX = e.target.offsetWidth / e.target.width;
+        const scaleY = e.target.offsetHeight / e.target.height;
+
+        const posX = (x - e.target.offsetWidth / 2) * scaleX;
+        const posY = (y - e.target.offsetHeight / 2) * scaleY;
+
+        e.target.style.transformOrigin = `${posX}px ${posY}px`;
+        e.target.classList.add('zoomed');
+    });
+
+    document.getElementById('zoom-img3').addEventListener('mouseleave', function () {
+        this.classList.remove('zoomed');
+    });
+</script> -->
+<script src="../styles/script.js"></script>
+
+</html>
