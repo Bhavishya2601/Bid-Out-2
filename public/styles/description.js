@@ -28,7 +28,7 @@ readButton.addEventListener('click', () => {
 // for bidding
 let currentNumber = parseInt(localStorage.getItem('currentNumber')) || parseInt(document.getElementById('output1').innerHTML);
 if (!isNaN(currentNumber)) {
-    document.getElementById('output1').innerText = `$${currentNumber}`;
+    document.getElementById('output1').innerText = `${currentNumber}`;
 }
 
 document.getElementById('guessForm').addEventListener('submit', function (event) {
@@ -39,7 +39,7 @@ document.getElementById('guessForm').addEventListener('submit', function (event)
     if (guess > currentNumber) {
         currentNumber = guess;
         alert('Your Bid has been Successfully Placed.')
-        document.getElementById('output1').innerText = `$${currentNumber}`;
+        document.getElementById('output1').innerText = `${currentNumber}`;
         localStorage.setItem('currentNumber', currentNumber);
     } else {
         alert('Bid amount can\'t be less than or equal to current bid');

@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="../images/icons/favicon.ico" type="image/x-icon">
     <title>Bid Out - The Best Online Auction Website for 2024</title>
     <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/chatbot.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet"
@@ -151,7 +152,7 @@
                     <div class="a1_head">Ford Mustang 1965</div>
                     <div class="a1_description">Iconic American muscle car, epitome of style, power, and performance.</div>
                     <div class="a1_bid">
-                        <div>Current bid: 10,104.0$</div>
+                        <div>Current bid: 25,304.0$</div>
                         <div><a href="product-account.html"><button>Place your Bid</button></a></div>
                     </div>
                 </div>
@@ -417,7 +418,29 @@
             </ul>
         </nav>
     </footer>
+
+    <!-- code for chatbot -->
+    <button id="init"><span class="material-symbols-outlined">mode_comment</span></button>
+<div id="test" style="position: fixed;top: 8rem;right: 3rem;display: none;">
+    <div class="child" id="chatbot">
+        <div class="header">
+            <div class="h-child">
+                Chatbot
+            </div>
+            <div>
+                <button class="refBtn"><i class="fa fa-refresh" onclick="initChat()"></i></button>
+            </div>
+        </div>
+
+        <div id="chat-box"></div>
+        
+        <div class="footer">
+            <span>powered by @Bid Out</span>
+        </div>
+    </div>
+</div>
 </body>
+<script src="../styles/chatbot.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 <script>
     var splide = new Splide('#icons_slide2', {

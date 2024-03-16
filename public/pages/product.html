@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bid Out - Product page</title>
     <link rel="stylesheet" href="../styles/product.css">
+    <link rel="stylesheet" href="../styles/chatbot.css">
     <link rel="shortcut icon" href="../images/icons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -125,7 +126,7 @@
                             <p id="demo"></p>
                         </div>
                         <div class="a1_bid" id="first">
-                            <div>Current bid: 18,104.0$</div>
+                            <div>Current bid: 25,304.0$</div>
                             <div><a href="../profile.html" target="_blank"><button>Place your Bid</button></a></div>
                         </div>
                     </div>
@@ -472,8 +473,31 @@
             </ul>
         </nav>
     </footer>
+<!-- code for chatbot -->
+
+<button id="init"><span class="material-symbols-outlined">mode_comment</span></button>
+<div id="test" style="position: fixed;top: 8rem;right: 3rem;display: none;">
+    <div class="child" id="chatbot">
+        <div class="header">
+            <div class="h-child">
+                Chatbot
+            </div>
+            <div>
+                <button class="refBtn"><i class="fa fa-refresh" onclick="initChat()"></i></button>
+            </div>
+        </div>
+
+        <div id="chat-box"></div>
+        
+        <div class="footer">
+            <span>powered by @Bid Out</span>
+        </div>
+    </div>
+</div>
+
 
 </body>
+<script src="../styles/chatbot.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 <!-- <script src="../styles/script.js"></script> -->
 <script>
