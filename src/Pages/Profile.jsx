@@ -111,7 +111,7 @@ export default function Profile() {
                 </svg>
                 <span className="text-xs xs:text-sm">Get In Contact</span>
               </a>
-              <a  href="front-account.html"class="flex items-center bg-blue-600 hover:bg-green-700 text-gray-100 px-4 py-2 rounded text-sm space-x-2 transition duration-100">
+              <a  href="pages/front-account.html"class="flex items-center bg-blue-600 hover:bg-green-700 text-gray-100 px-4 py-2 rounded text-sm space-x-2 transition duration-100">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-4 w-4"
