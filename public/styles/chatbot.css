@@ -111,7 +111,7 @@
 .opt{
     padding: 5px 20px;
     columns: lightsalmon;
-    border: 1px solid blueviolet;
+    border: 1px solid rgb(219, 55, 101);
     border-radius: 1rem;
     margin: 0.3rem 0.5rem;
     display: inline-block;
@@ -120,14 +120,16 @@
     background: white;
     text-align: center;
     font-size: 14px;
-    color: blueviolet;
+    /* color: blueviolet; */
+    color: rgb(219, 55, 101);
 }
 .link{
     text-decoration: none;
     display: block;
     text-align: center;
     color: aliceblue !important;
-    background: blueviolet;
+    /* background: blueviolet; */
+    background-color: rgb(244, 104, 144);
 }
 .m-link{
     text-decoration: none;
@@ -135,5 +137,6 @@
 .link:active{
     background: white;
     border: 1px solid blueviolet;
-    color: blueviolet;
+    /* color: blueviolet; */
+    color: white;
 }

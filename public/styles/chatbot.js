@@ -1,110 +1,24 @@
 var data = {
     chatinit: {
         title: ["Hi there <span class='emoji'> &#128075;</span>", "How can I help you today?"],
-        options: ["Movies <span class='emoji'> &#128250;</span>", "News", "Shopping <span class='emoji'> &#128090;</span>", "Music <span class='emoji'> &#127925;</span>"]
+        options: ["Browse Products", "Modes of Payment", "Why should I choose you?", "Just Browsing "]
     },
-    movies: {
-        title: ["Please select category"],
-        options: ['Hollywood', 'Bollywood', 'Web Series', 'Others'],
+    browse: {
+        title: ["Click the link below to Browse products: "],
+        options: ['Click here'],
         url: {
-
+            link: ["product-account.html"]
         }
     },
-
-    news: {
-        title: ["Today's Top 5 Headlines"],
-        options: ["The rare green comet will make its closest pass of Earth between February 1 and February 2, according to NASA.", "The rare green comet will make its closest pass of Earth between February 1 and February 2, according to NASA.", "The rare green comet will make its closest pass of Earth between February 1 and February 2, according to NASA."],
-        url: {
-            more: "https://www.google.com",
-            link: ["https://www.youtube.com/@webhub/videos", "https://www.youtube.com/@webhub/videos", "https://www.youtube.com/@webhub/videos", "https://www.youtube.com/@webhub/videos"]
-        }
+    modes: {
+        title: ["We provide various different types of modes of payment :","Credit Card","Debit Card","NetBanking","UPI","NFTS/RTGS"],
     },
-    shopping: {
-        title: ["Thanks for your response", "Welcome to shopping zone <span class='emoji'> &#128090;</span>", "Please select one of the below options to proceed further"],
-        options: ['Electronics', 'Beauty products', 'Mobiles', 'Men Fashion', 'Women fashion'],
-        url: {
-
-        }
+    why: {
+        title: ["We provide various variety of products and provides User-friendly interface and has great User Experience"],
     },
-    electronics: {
-        title: ["Thanks for your response", "Here are some electronic items for you", "Click on it to know more"],
-        options: ['Televisions', 'Cameras', 'Gaming Consoles', 'Headphones', 'Speakers'],
-        url: {
-            more: "https://www.youtube.com/@webhub/videos",
-            link: ["#", "#", "#", "#", "#"]
-        }
-    },
-    beauty: {
-        title: ["Thanks for your response", "Here are some beauty products for you", "Click on it to know more"],
-        options: ['Make-up & Nails', 'Skin Care', 'Fragrance', 'Hair care'],
-        url: {
-            more: "https://www.youtube.com/@webhub/videos",
-            link: ["#", "#", "#", "#"]
-        }
-    },
-    mobiles: {
-        title: ["Thanks for your response", "These are some results based on your input", "Click on it to know more"],
-        options: ['Mobile Phones', 'Cases & Covers', 'Power Banks', 'Tablets'],
-        url: {
-            more: "https://www.youtube.com/@webhub/videos",
-            link: ["#", "#", "#", "#"]
-        }
-    },
-    men: {
-        title: ["Thanks for your response", "These are some results based on your input", "Click on it to know more"],
-        options: ['Clothing', 'Shirts', 'T-shirts', 'Innerwear', 'Jeans'],
-        url: {
-            more: "https://www.youtube.com/@webhub/videos",
-            link: ["#", "#", "#", "#", "#"]
-        }
-    },
-    women: {
-        title: ["Thanks for your response", "These are some results based on your input", "Click on it to know more"],
-        options: ['Clothing', 'Western Wear', 'Ethnic Wear', 'Top Brands'],
-        url: {
-            more: "https://www.youtube.com/@webhub/videos",
-            link: ["#", "#", "#", "#"]
-        }
-    },
-    music: {
-        title: ["These are some latest songs <span class='emoji'> &#127925;</span>"],
-        options: ["song 1", "song 2", "song 3", "song 4", "song 5"],
-        url: {
-            more: "https://www.youtube.com/@webhub/videos",
-            link: ["https://www.youtube.com/@webhub/videos", "https://www.youtube.com/@webhub/videos", "https://www.youtube.com/@webhub/videos", "https://www.youtube.com/@webhub/videos"]
-        }
-    },
-    hollywood: {
-        title: ["Thanks for your response", "Here are some genre based movies"],
-        options: ["Comedy", "Horror", "Sci-Fi", "Romance", "Action"],
-        url: {
-            more: "https://www.youtube.com/@webhub/videos",
-            link: ["#", "#", "#", "#", "#"]
-        }
-    },
-    bollywood: {
-        title: ["Thanks for your response", "Here are some genre based movies"],
-        options: ["Comedy", "Horror", "Sci-Fi", "Romance", "Action"],
-        url: {
-            more: "https://www.youtube.com/@webhub/videos",
-            link: ["#", "#", "#", "#", "#"]
-        }
-    },
-    web: {
-        title: ["Thanks for your response", "Here are some genre based web series"],
-        options: ["Comedy", "Horror", "Sci-Fi", "Romance", "Action"],
-        url: {
-            more: "https://www.youtube.com/@webhub/videos",
-            link: ["#", "#", "#", "#", "#"]
-        }
-    },
-    others: {
-        title: ["Here are some more options for you"],
-        options: ["YouTube", "Netflix", "Amazon Prime", "Hot Star"],
-        url: {
-            more: "https://www.youtube.com/",
-            link: ["#", "#", "#", "#", "#"]
-        }
+   
+    just: {
+        title: ["Thank you for visiting our site, hope you spend happy time on our site. <span class='emoji'>&#128515;</span> "],
     },
 }
 
@@ -223,8 +137,8 @@ function handleOptions(options, url) {
         opt.setAttribute("class", "opt");
         cbot.appendChild(opt);
     }
-    var opt = document.createElement("span");
-    var inp = '<a class="m-link" href="' + url.more + '">' + 'See more</a>';
+    // var opt = document.createElement("span");
+    // var inp = '<a class="m-link" href="' + url.more + '">' + 'Click Here</a>';
 
     const isObjectEmpty = (url) => {
         return JSON.stringify(url) === "{}";

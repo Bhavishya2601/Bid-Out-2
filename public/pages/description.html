@@ -137,7 +137,7 @@
                     <div class="bid_box">
                         <div class="bid">
                             <input type="number" id="guessInput" placeholder="Enter Your Bid">
-                            <button type="submit" class="bid_button">Bid</button>
+                            <button type="submit" class="bid_button" onclick="redirect()">Bid</button>
 
                         </div>
                     </div>
@@ -363,6 +363,14 @@
 
 </body>
 <script src="../styles/description.js"></script>
+<script>
+    function redirect(){
+        setTimeout(function() {
+            alert('Redirecting to Payment Gateway...')
+            window.open('payment.html','_blank')
+        },3000)
+    }
+</script>
 <!-- <script>
 
     document.getElementById('zoom-img').addEventListener('mousemove', function (e) {
