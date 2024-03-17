@@ -144,6 +144,7 @@ header {
     font-size: 17px;
     border: none;
     cursor: pointer;
+    border-radius: 0;
 }
 
 .overlay button:hover {

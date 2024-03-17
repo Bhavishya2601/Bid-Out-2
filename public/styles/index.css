@@ -170,6 +170,9 @@ header {
     font-size: 17px;
     border: none;
     cursor: pointer;
+    border-radius: 0;
+    margin-left: 0;
+    color: black;
 }
 
 .overlay button:hover {
