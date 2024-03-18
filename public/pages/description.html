@@ -14,6 +14,8 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    
 </head>
 
 <body>
@@ -364,94 +366,38 @@
 </body>
 <script src="../styles/description.js"></script>
 <script>
-    function redirect(){
-        setTimeout(function() {
-            alert('Redirecting to Payment Gateway...')
-            window.open('payment.html','_blank')
-        },3000)
+   document.getElementById('guessForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+    const guess = parseInt(document.getElementById('guessInput').value);
+
+    // console.log(guess, currentNumber)
+    if (guess > currentNumber) {
+        currentNumber = guess;
+        let email = prompt('Your Bid has been Successfully Placed.\nEnter your Email to proceed: ')
+        let emailbody = <h2>Your bid placed is </h2>${guess};
+        Email.send({
+            SecureToken: "c9e3c331-9876-4d53-b5cd-10b590cdcd10",
+            To: email.value,
+            From: "bidout2024@gmail.com",
+            Subject : "Email OTP using JavaScript",
+            Body : emailbody,
+    })
+        document.getElementById('output1').innerText = ${currentNumber};
+        localStorage.setItem('currentNumber', currentNumber);
+        setTimeout(
+            function (){
+                window.open('payment.html','_blank')
+            },1000
+        )
+
+    } else {
+        alert('Bid amount can\'t be less than or equal to current bid');
     }
+
+    // Reset the form
+    document.getElementById('guessInput').value = '';
+});
 </script>
-<!-- <script>
-
-    document.getElementById('zoom-img').addEventListener('mousemove', function (e) {
-        const rect = e.target.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-
-        const scaleX = e.target.offsetWidth / e.target.width;
-        const scaleY = e.target.offsetHeight / e.target.height;
-
-        const posX = (x - e.target.offsetWidth / 2) * scaleX;
-        const posY = (y - e.target.offsetHeight / 2) * scaleY;
-
-        e.target.style.transformOrigin = `${posX}px ${posY}px`;
-        e.target.classList.add('zoomed');
-    });
-
-    document.getElementById('zoom-img').addEventListener('mouseleave', function () {
-        this.classList.remove('zoomed');
-    });
-
-    document.getElementById('zoom-img1').addEventListener('mousemove', function (e) {
-        const rect = e.target.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-
-        const scaleX = e.target.offsetWidth / e.target.width;
-        const scaleY = e.target.offsetHeight / e.target.height;
-
-        const posX = (x - e.target.offsetWidth / 2) * scaleX;
-        const posY = (y - e.target.offsetHeight / 2) * scaleY;
-
-        e.target.style.transformOrigin = `${posX}px ${posY}px`;
-        e.target.classList.add('zoomed');
-    });
-
-    document.getElementById('zoom-img1').addEventListener('mouseleave', function () {
-        this.classList.remove('zoomed');
-    });
-
-
-    document.getElementById('zoom-img2').addEventListener('mousemove', function (e) {
-        const rect = e.target.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-
-        const scaleX = e.target.offsetWidth / e.target.width;
-        const scaleY = e.target.offsetHeight / e.target.height;
-
-        const posX = (x - e.target.offsetWidth / 2) * scaleX;
-        const posY = (y - e.target.offsetHeight / 2) * scaleY;
-
-        e.target.style.transformOrigin = `${posX}px ${posY}px`;
-        e.target.classList.add('zoomed');
-    });
-
-    document.getElementById('zoom-img2').addEventListener('mouseleave', function () {
-        this.classList.remove('zoomed');
-    });
-
-
-
-    document.getElementById('zoom-img3').addEventListener('mousemove', function (e) {
-        const rect = e.target.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-
-        const scaleX = e.target.offsetWidth / e.target.width;
-        const scaleY = e.target.offsetHeight / e.target.height;
-
-        const posX = (x - e.target.offsetWidth / 2) * scaleX;
-        const posY = (y - e.target.offsetHeight / 2) * scaleY;
-
-        e.target.style.transformOrigin = `${posX}px ${posY}px`;
-        e.target.classList.add('zoomed');
-    });
-
-    document.getElementById('zoom-img3').addEventListener('mouseleave', function () {
-        this.classList.remove('zoomed');
-    });
-</script> -->
 <script src="../styles/script.js"></script>
 
 </html>
