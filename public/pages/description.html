@@ -366,9 +366,9 @@
 </body>
 <script src="../styles/description.js"></script>
 <script>
-let currentNumber = parseInt(localStorage.getItem('currentNumber')) || parseInt(document.getElementById('output').innerHTML);
-if (!isNaN(currentNumber)) {
-    document.getElementById('output').innerText = `${currentNumber}`;
+let currentNumber1 = parseInt(localStorage.getItem('currentNumber1')) || parseInt(document.getElementById('output').innerHTML);
+if (!isNaN(currentNumber1)) {
+    document.getElementById('output').innerText = `${currentNumber1}`;
 }
 
 document.getElementById('guessForm').addEventListener('submit', function (event) {
@@ -376,8 +376,8 @@ document.getElementById('guessForm').addEventListener('submit', function (event)
     const guess = parseInt(document.getElementById('guessInput').value);
 
     // console.log(guess, currentNumber)
-    if (guess > currentNumber) {
-        currentNumber = guess;
+    if (guess > currentNumber1) {
+        currentNumber1 = guess;
         let email =prompt('Your Bid has been Successfully Placed.\nEnter your Email to proceed: ')
         let emailbody = `<h1>Thank you for using our Platform Bid-Out</h1><br>Your bid of <h2>${guess}</h2> has been Successfully Placed.`;
         Email.send({
@@ -386,8 +386,8 @@ document.getElementById('guessForm').addEventListener('submit', function (event)
             From: "bidout2024@gmail.com",
         Subject : "Bid Placed !!",
         Body : emailbody,})
-        document.getElementById('output').innerText = `${currentNumber}`;
-        localStorage.setItem('currentNumber', currentNumber);
+        document.getElementById('output').innerText = `${currentNumber1}`;
+        localStorage.setItem('currentNumber1', currentNumber1);
         setTimeout(function() {
             window.open('payment.html','_blank')
             // alert('Redirecting to Payment Gateway...')
