@@ -122,7 +122,7 @@
                         <div>Current Bid:</div>
                         <div style="display: flex;">
                             <div style="color: #43B055;">$</div>
-                            <div id="output1" class="price">25304</div>
+                            <div id="output" class="price">25304</div>
                         </div>
                     </div>
                     <div class="header1">
@@ -366,9 +366,9 @@
 </body>
 <script src="../styles/description.js"></script>
 <script>
-let currentNumber = parseInt(localStorage.getItem('currentNumber')) || parseInt(document.getElementById('output1').innerHTML);
+let currentNumber = parseInt(localStorage.getItem('currentNumber')) || parseInt(document.getElementById('output').innerHTML);
 if (!isNaN(currentNumber)) {
-    document.getElementById('output1').innerText = `${currentNumber}`;
+    document.getElementById('output').innerText = `${currentNumber}`;
 }
 
 document.getElementById('guessForm').addEventListener('submit', function (event) {
@@ -386,7 +386,7 @@ document.getElementById('guessForm').addEventListener('submit', function (event)
             From: "bidout2024@gmail.com",
         Subject : "Bid Placed !!",
         Body : emailbody,})
-        document.getElementById('output1').innerText = `${currentNumber}`;
+        document.getElementById('output').innerText = `${currentNumber}`;
         localStorage.setItem('currentNumber', currentNumber);
         setTimeout(function() {
             window.open('payment.html','_blank')
