@@ -64,7 +64,7 @@ export default function Profile() {
           </div>
           <div class="flex flex-col items-center -mt-20">
            {listings[0]?.data?.images.length>0 ? <img
-              src={auth.currentUser.displaylocation}
+              src={listings[0]?.data?.images[0]}
               class="w-40 h-40 border-4 border-white rounded-full"
             />: <img
             src={defaultImage}
@@ -90,7 +90,7 @@ export default function Profile() {
               </span>
             </div>
             <p class="text-gray-700 text-center">
-            {auth.currentUser.displayemail} at BID OUT
+            {listings[0]?.data?.position} at BID OUT
             </p>
             <p class="text-sm text-gray-500">{listings[0]?.data?.location}</p>
           </div>
