@@ -273,8 +273,8 @@ export default function SignUp() {
                     placeholder="Select an option"
                   >
                     <option value="">Select an option</option>
-                    <option value="Lead">Seller</option>
-                    <option value="Head">Buyer</option>
+                    <option value="Seller">Seller</option>
+                    <option value="Buyer">Buyer</option>
                     </select>
                 </div>
                 <div className="w-1/2">
