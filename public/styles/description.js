@@ -83,17 +83,25 @@ let slideIndex = 1;
 // for description part
 function showDescription() {
     document.getElementById('descriptionSection').style.display = 'block';
+    document.getElementById('bidHistory').style.display = 'none';
     document.getElementById('bidProduct').style.display = 'none';
     document.getElementById('bidReview').style.display = 'none';
 }
-
+function showHistory(){
+    document.getElementById('descriptionSection').style.display = 'none';
+    document.getElementById('bidHistory').style.display = 'block';
+    document.getElementById('bidProduct').style.display = 'none';
+    document.getElementById('bidReview').style.display = 'none';
+}
 function showProducts() {
     document.getElementById('descriptionSection').style.display = 'none';
+    document.getElementById('bidHistory').style.display = 'none';
     document.getElementById('bidReview').style.display = 'none';
     document.getElementById('bidProduct').style.display = 'block';
 }
 function showReview(){
     document.getElementById('descriptionSection').style.display = 'none';
+    document.getElementById('bidHistory').style.display = 'none';
     document.getElementById('bidReview').style.display = 'block';
     document.getElementById('bidProduct').style.display = 'none';
 }

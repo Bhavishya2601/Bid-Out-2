@@ -365,10 +365,10 @@ header {
   display: flex;
   width: 92%;
   margin-top: 80px;
-  margin-bottom: 70px;
+  margin-bottom: 40px;
   align-items: center;
-  background-color: #ebf2ff;
-  height: 100px;
+  /* background-color: #ebf2ff; */
+  height: 70px;
   border-radius: 15px;
   padding-left: 8%;
 }
@@ -386,6 +386,7 @@ header {
   border-radius: 10px;
   padding: 10px 20px;
   margin-left: 30px;
+  box-shadow: 2px 2px 5px #888888;
   /* width: 200px; */
   /* align-items: center; */
   cursor: pointer;
@@ -430,6 +431,30 @@ header {
 
 }
 
+table {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 20px auto; /* Center the table with margin */
+  border: 2px solid #ddd; /* Add border */
+}
+
+th, td {
+  padding: 8px;
+  text-align: center; /* Center align text in table cells */
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2; /* Background color for table header */
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2; /* Alternate row background color */
+}
+
+tbody tr:last-child td {
+  border-bottom: none; /* Remove bottom border for the last row */
+}
 .rate {
   float: left;
   height: 46px;
