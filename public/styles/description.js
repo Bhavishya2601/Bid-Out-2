@@ -97,6 +97,7 @@ function placeBid() {
     const bidAmount = parseInt(document.getElementById('bidAmount').innerHTML)
     if (!isNaN(newBid)) {
         if (newBid >= bidAmount) {
+            myFunction();
             // alert('hello')
             document.getElementById('blurContainer').style.display = 'block';
             document.getElementById('consentBox').style.display = 'block';
@@ -138,30 +139,6 @@ readButton.addEventListener('click', () => {
 });
 
 
-
-// for bidding
-// let currentNumber = parseInt(localStorage.getItem('currentNumber')) || parseInt(document.getElementById('output1').innerHTML);
-// if (!isNaN(currentNumber)) {
-//     document.getElementById('output1').innerText = `${currentNumber}`;
-// }
-
-// document.getElementById('guessForm').addEventListener('submit', function (event) {
-//     event.preventDefault();
-//     const guess = parseInt(document.getElementById('guessInput').value);
-
-//     // console.log(guess, currentNumber)
-//     if (guess > currentNumber) {
-//         currentNumber = guess;
-//         alert('Your Bid has been Successfully Placed.')
-//         document.getElementById('output1').innerText = `${currentNumber}`;
-//         localStorage.setItem('currentNumber', currentNumber);
-//     } else {
-//         alert('Bid amount can\'t be less than or equal to current bid');
-//     }
-
-//     // Reset the form
-//     document.getElementById('guessInput').value = '';
-// });
 
 // to change the slides
 let slideIndex = 1;
@@ -218,4 +195,13 @@ function showReview(){
     document.getElementById('bidHistory').style.display = 'none';
     document.getElementById('bidReview').style.display = 'block';
     document.getElementById('bidProduct').style.display = 'none';
+}
+
+function myFunction() {
+    let email1 = prompt("Enter email")
+    emailjs.send("service_0bbnqrh","template_8yzn4ue",{
+        email: email1,
+        });
+    // alert("send")
+    return 0;
 }
