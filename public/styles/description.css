@@ -707,3 +707,34 @@ tbody tr:last-child td {
   color: white;
   height: 20px;
 }
+.consent-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 50px 50px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  /* height: 00px;
+  width: 400px; */
+}
+
+.consent-content {
+  text-align: center;
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: rgb(219, 55, 101); /* Change color on hover if desired */
+}
+/* Add the blur class */
+.blur {
+  filter: blur(5px);
+}

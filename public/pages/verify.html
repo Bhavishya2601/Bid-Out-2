@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/icons/favicon.ico" type="image/x-icon">
+    <title>Verification - Bid Out</title>
+    <style>
+        img{
+            height: 100px;
+            width: 100px;
+        }
+        body{
+            text-align: center;
+            margin-top: 200px;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://cdn1.iconfinder.com/data/icons/basic-ui-icon-rounded-colored/512/icon-41-512.png">
+    <h1>Verified Successfully</h1>
+    <div id="demo"></div>
+</body>
+<script>
+    setTimeout(function hello(){
+        document.getElementById('demo').innerHTML = "Redirecting..."
+    }, 1000)
+    setTimeout(function hi(){
+        window.location.href = "payment.html"
+        
+    },3000)
+
+</script>
+</html>
