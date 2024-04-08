@@ -157,7 +157,8 @@
                     <h5>Product Name</h5>
                     <input type="text" id="pname" name="name" />
                     <h5>Product Image</h5>
-                    <input type="text" id="pimage" name="image" />
+                    <input type="file" id="pimage" name="image" onchange="getFile(event)" accept="image/png,image/jpeg"/>
+                    <span class="fileText" style="display: none"></span>
                     <h5>Product description</h5>
                     <span class="textarea" role="textbox" id="pdesc" name="description"  contenteditable style="border: 2px solid;"></span>
                 </div>
@@ -180,11 +181,13 @@
                 products. We want to be a part of your smile, success and future growth.Be a part of best platform for online auction. 
             </div>
             <div id="button_container">
-                <button id="submit" onclick="save()" style="background-color: green;">Upload Data</button>
+                <button style="background-color: rgb(32, 208, 32);"><Get onclick="uploadimg()" >Upload Product</button>
             </div>
             <div class="bc">
-            <button id="redirect1" onclick="redirect1()">Browse Products</button></div>
-            <!-- <button><Get onclick="getAllDataFromRealtimeDatabase(callback)">Get dat</button> -->
+                <button id="redirect1" onclick="redirect1()">Products page</button>
+            </div>
+            <!-- <button><Get onclick="getAllDataFromRealtimeDatabase(callback)">Get dat</button> 
+            <button id="submit" onclick="save()" style="background-color: green;">Upload Data</button> -->
         </div>
     </div>
 
