@@ -2,7 +2,7 @@ const myfavsJson=localStorage.getItem("favs") ;
 let myfavs=JSON.parse(myfavsJson);
 console.log(myfavs)
 // ? favs = JSON.parse(localStorage.getItem("favs")) : favs = [];
-let cards=[{id:1,name:"Ford Mustang 1965",img:"mustang.png",desc:"Iconic American muscle car, the 1965 Ford Mustang, epitomizes power, style, and enduring automotive legend.",price:"Current bid: 25,304.0$"},
+let cards=[{id:1,name:"Ford Mustang 1965",img:"mustang.png",desc:"Iconic American muscle car, the 1965 Ford Mustang, epitomizes power, style, and enduring automotive legend.",price:"Current bid: 25,000.0$"},
 {id:2,name:"Honda CBR 600 (2022)", img:"https://bidout-wp.b-cdn.net/wp-content/uploads/2022/10/Image-15.jpg",desc:"The Honda CBR 600 (2022) is a sleek and powerful sportbike known for its agility and performance on the road",price:"Current bid: 3,050.0$"},
 {id:3,name:"Toyota AIGID A Class Car",img:"https://bidout-wp.b-cdn.net/wp-content/uploads/2022/10/Image-6.jpg",desc:"The Toyota AIGID A Class offers cutting-edge technology and sleek design for a premium driving experience.",price:"Current bid: 4,000.0$"},
 {id:4,name:"Lady's Retro Diamond ",img:"https://pixner.net/sbidu/main/assets/images/auction/watches/auction-3.jpg",desc:"Lady's Retro Diamond is an exquisite vintage-inspired diamond necklace with timeless elegance and charm.",price:"Current bid: 2103.0$"},
