@@ -13,16 +13,16 @@ document.addEventListener('DOMContentLoaded', function() {
       var initialData = {
         labels: [getCurrentTime()], // Initial label is current time and date
         datasets: [{
-          label: 'Price Trend',
-          backgroundColor: 'rgba(54, 162, 235, 0.2)',
-          borderColor: 'rgba(54, 162, 235, 1)',
+          label: 'Price Trend (in $)',
+          backgroundColor: 'rgb(219, 55, 101)',
+          borderColor: 'rgb(219, 55, 101)',
           borderWidth: 2,
           pointRadius: 5,
           pointHoverRadius: 7,
-          pointBackgroundColor: 'rgba(54, 162, 235, 1)',
+          pointBackgroundColor: 'rgb(219, 55, 101)',
           pointBorderColor: '#fff',
           pointHoverBackgroundColor: '#fff',
-          pointHoverBorderColor: 'rgba(54, 162, 235, 1)',
+          pointHoverBorderColor: 'rgb(219, 55, 101)',
           data: [newDataValue] // Initial data
         }]
       };
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
       document.getElementById('bidAmount').textContent = newDataValue;
 
       // Start updating the graph automatically every 5 seconds
-      interval = setInterval(updateGraph, 20000);
+      interval = setInterval(updateGraph, 30000);
     }
 
     // Event listener for manual data input button
