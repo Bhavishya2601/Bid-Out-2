@@ -20,6 +20,7 @@
             margin: 0;
             box-sizing: border-box;
             border-radius: 10px;
+            font-family: "Kdam Thmor Pro", sans-serif;
         }
 
         /* body {
@@ -32,7 +33,7 @@
 
         .pmain {
             display: block;
-            margin-top:10px;
+            margin-top: 10px;
         }
 
         .pinfo {
@@ -61,9 +62,8 @@
             border: 1px solid black;
             width: 30vw;
             height: 77dvh;
-            padding: 5dvh auto;
-            margin-top:10px;
-            justify-content: center;
+            padding: 5dvh 20px;
+            margin-top: 10px;
         }
 
         input {
@@ -74,7 +74,7 @@
         }
 
         button {
-            margin-top:5dvh;
+            margin-top: 5dvh;
             padding: 10px 20px;
             border-radius: 20px;
             font-size: 15px;
@@ -83,16 +83,37 @@
             color: white;
             cursor: pointer;
         }
+
         .textarea {
-            padding:10px;
+            padding: 10px;
             margin-left: 10px;
-  display: block;
-  width: 80%;
-  overflow: hidden;
-  resize: both;
-  min-height: 40px;
-  line-height: 20px;
-}
+            display: block;
+            width: 80%;
+            overflow: hidden;
+            resize: both;
+            min-height: 40px;
+            line-height: 20px;
+        }
+
+        #addtext {
+            margin-top: 30px;
+            padding: 15px 45px;
+            width: 100%;
+            display: flex;
+            text-align: center;
+            justify-content:center;
+            align-items: center;
+            font-size: 20px;
+        }
+
+        #button_container, .bc{
+            padding: 0 30px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 28px;
+        }
     </style>
 </head>
 
@@ -151,15 +172,21 @@
                 </div>
             </div>
             <div class="pcatagory">
-                <div id="button_container">
-                    <button id="submit" onclick="save()">Submit</button>
-                </div>
-                <button id="redirect1" onclick="redirect1()">Products page</button><br>
-                <button>
-                    <Get onclick="getAllDataFromRealtimeDatabase(callback)">Get data
-                </button>
+            <div style=" width:100% ;display: flex;justify-content: center;">
+                <img src="../images/images/logo.png" alt="bid-out">
             </div>
+            <div id="addtext">
+                Upload your product on the world's best & largest Bidding marketplace with our beautiful Bidding
+                products. We want to be a part of your smile, success and future growth.Be a part of best platform for online auction. 
             </div>
+            <div id="button_container">
+                <button id="submit" onclick="save()" style="background-color: green;">Upload Data</button>
+            </div>
+            <div class="bc">
+            <button id="redirect1" onclick="redirect1()">Browse Products</button></div>
+            <!-- <button><Get onclick="getAllDataFromRealtimeDatabase(callback)">Get dat</button> -->
+        </div>
+    </div>
 
 
     <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
