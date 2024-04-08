@@ -14,7 +14,7 @@ firebase.initializeApp(firebaseConfig);
 var database = firebase.database();
 
 function redirect1() {
-  window.location.href = 'retrivedata.html';
+  window.location.href = 'product-account.html';
 }
 
 function save() {
