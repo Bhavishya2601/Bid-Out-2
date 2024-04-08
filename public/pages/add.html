@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design Product add</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            border-radius:10px;
+        }
+        body {
+            display: flex; 
+            line-height: 5vh; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh;
+        }
+        .pmain {
+            display: block; 
+        }
+        .pinfo {
+            width: 65vw; 
+            height: 55vh; 
+            margin-top: 40px;
+            margin-left: 10px;
+            padding: 40px;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column; 
+            align-items: flex-start;
+        }
+        .pprice {
+            margin: 10px;
+            margin-top: 35px;
+            padding: 20px;
+            border: 1px solid black;
+            width: 65vw;
+            height: 30vh; 
+            display: flex;
+            flex-direction: column; 
+            align-items: flex-start;
+        }
+        .pcatagory {
+            margin-top: 40px;
+            border: 1px solid black;
+            width: 30vw; 
+            height: 90vh; 
+        }
+        input {
+            width: 80%;
+            margin-left: 10px;
+            padding:5px;
+        }
+
+        /* .pprice > input{   } */
+    </style>
+</head>
+<body>
+    
+<div class="pmain">
+    <div class="pinfo">
+       <input type="text" id="username" name="description" placeholder="username" style="height: 80px" />
+        <h1>Product Info</h1>
+        <h5>Product Name</h5>
+        <input type="text" id="pname" name="name" />
+        <h5>Product Image</h5>
+        <input type="text" id="pimage" name="image" />
+        <h5>Product description</h5>
+        <input type="text" id="pdesc" name="description" style="height: 80px" />
+    </div>
+    <div class="pprice">
+        <h1>Product Price</h1>
+        <div class="p" style="display:inline-flex ;width:100%;margin-top: 8dvh;line-height: 3dvh;">
+        <h5>Lowest Price</h5>
+        <input type="text" id="lowprice" name="price1" style="width:30%" />
+        <h5 style="margin-left: 5dvw;">Expected Price</h5>
+        <input type="text" id="expprice" name="price2" style="width:30%"  /></div>
+    </div>
+</div>
+<div class="pcatagory">
+    <div id="button_container">
+    <button id="submit" onclick="save()">Submit</button>
+</div>
+<button id="redirect1" onclick="redirect1()">Products page</button><br>
+<button><Get onclick="getAllDataFromRealtimeDatabase(callback)">Get data</button>
+</div>
+
+
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+<script src="./selleradd.js"></script>
+
+</body>
+</html>

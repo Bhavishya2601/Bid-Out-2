@@ -43,8 +43,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 blurContainer.style.display = 'block';
                 consentBox.style.display = 'block';
                 disableScroll(); // Disable scrolling when consent box is open
-            } else {
-                alert(`Bid amount entered can't be less than or equal to current Bid`);
             }
         } else {
             alert('Please enter a valid bid amount.');

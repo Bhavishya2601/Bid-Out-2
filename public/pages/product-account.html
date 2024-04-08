@@ -35,9 +35,9 @@
             <div class="nav1">
                 <div><a href="front-account.html">Home</a></div>
                 <div><a href="about.html">About us</a></div>
-                <div class="home"><a href="product.html">Browse product</a></div>
+                <div class="home"><a href="product-account.html">Browse product</a></div>
                 <div><a href="favourite.html" target="_blank">My Wishlist</a></div>
-                <!-- <div><a href="#">Blog</a></div> -->
+                <div><a href="add.html">Add Product</a></div>
                 <div><a href="contact.html">Contact</a></div>
             </div>
             <div class="nav2">
@@ -369,7 +369,7 @@
                     <div class="head-a">
                         <div><img src="../images/icons/upcoming.png"></div> &ensp;
                         <div>
-                            <div class="head-b">Upcoming Bids</div>
+                            <div class="head-b">Listed Products</div>
                             <div class="head-bi">Bid and win great deals,Our auction process is simple, efficient, and
                                 transparent.</div>
                         </div>
@@ -378,7 +378,7 @@
                         <button>View all</button>
                     </div>
                 </div>
-                <div class="auction">
+                <!-- <div class="auction">
 
                     <div class="a1 upcom">
                         <div class="imgBox"><img
@@ -428,7 +428,25 @@
                         <div class="a1_description" id="desci">Maisandaya referred to as Nandikona is the divine spirit
                             of a bull worshipped as a part of the Bhuta Kola</div>
                     </div>
-                </div>
+                </div> -->
+            
+
+                    <div id="displayData"></div>
+                
+                    <div class="a1">
+                        <div class="imgBox"><img src="https://bidout-wp.b-cdn.net/wp-content/uploads/2022/10/Image-15.jpg"></div>
+                        <div class="a1_head" id="pname">{user.pname}</div>
+                        <div class="a1_description" id="desciption"></div>
+                        <div class="a1_timer" id="timer"><p id="demo1"></p></div>
+                        <div class="a1_bid" id="first">
+                            <div>Current bid: Rs.<span id="price"></span></div>
+                            <div><button>Place your Bid</button></div>
+                        </div>
+                    </div>
+                    
+                    <div id="displayData"></div>
+                    
+                    
             </div>
         </div>
     </div>
@@ -536,6 +554,36 @@
 </script>
 <script src="../styles/product.js"></script>
 <script src="../styles/timer.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+<script src="./selleradd.js"></script>
+<script>
+    // Display the data on the new page
+    function displayData(userData) {
+        var displayDivName = document.getElementById('pname');
+        var displayDivPrice = document.getElementById('price');
+        var displayDivDesc = document.getElementById('description');
+        for (var key in userData.users) {
+            if (userData.users.hasOwnProperty(key)) {
+                var user = userData.users[key];
+                var userString = "<p>User: " + key + "<br>Pdesc: " + user.pdesc + "<br>Pname: " + user.pname + "<br>Pimage: " + user.pimage + "<br>Low: " + user.lowprice + "<br>Expected Price: " + user.expprice + "</p>";
+                displayDivName.innerHTML = user.pname;
+                displayDivPrice.innerHTML = user.expprice;
+                displayDivDesc.innerHTML = user.pdesc;
+            }
+        }
+    }
+
+    getAllDataFromRealtimeDatabase((err, datadb) => {
+        if (err) {
+            console.error('Error retrieving data: ', err);
+        } else {
+            console.log('Retrieved data: ', datadb);
+            displayData(datadb);
+        }
+    });
+</script>
+                    
 <!-- <script src="../styles/script.js"></script> -->
 
 

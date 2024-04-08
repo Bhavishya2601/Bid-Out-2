@@ -81,8 +81,6 @@ document.addEventListener('DOMContentLoaded', function() {
       if (inputValue > currentValue) {
         // Add the value to the graph
         addData(inputValue);
-      } else {
-        alert("Entered value must be greater than current value.");
       }
     });
 
