@@ -16,15 +16,33 @@ var database = firebase.database();
 function redirect1() {
   window.location.href = 'product-account.html';
 }
+function uploadimg(e) {
+  let storageRef = firebase.storage().ref("images/" + fileName); // Corrected storage path
+  let uploadTask = storageRef.put(fileItem);
 
-function save() {
- var username = document.getElementById("username").value;
- var pname = document.getElementById("pname").value;
-  var pimage = document.getElementById("pimage").value;
+  uploadTask.on("state_changed", (snapshot) => {
+    console.log(snapshot);
+    percentVal = Math.floor((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
+    console.log(percentVal);
+  }, (error) => {
+    console.log(error);
+  }, () => {
+    uploadTask.snapshot.ref.getDownloadURL().then((url) => {
+      console.log("URL", url);
+      save(url); // Call save function with url as an argument
+    }).catch((error) => {
+      console.log("Error getting download URL:", error);
+    });
+  });
+}
+
+function save(url) {
+  var username = document.getElementById("username").value;
+  var pname = document.getElementById("pname").value;
   var pdesc = document.getElementById("pdesc").value;
   var lowprice = document.getElementById("lowprice").value;
   var expprice = document.getElementById("expprice").value;
-
+  
   // Check if username is not empty
   if (!username) {
     alert("Please enter a username.");
@@ -40,11 +58,11 @@ function save() {
   // Save data to Firebase
   database.ref('users/' + username).set({
     pname: pname,
-    pimage: pimage,
+    pimage: url, // Use the url passed as an argument
     pdesc: pdesc,
     expprice: expprice,
     lowprice: lowprice
-  }, function(error) {
+  }, function (error) {
     if (error) {
       alert("Data could not be saved." + error);
     } else {
@@ -64,12 +82,16 @@ function getAllDataFromRealtimeDatabase(callback) {
     });
 }
 
-// Example usage:
-getAllDataFromRealtimeDatabase((err, datadb) => {
-  if (err) {
-    console.error('Error retrieving data: ', err);
-  } else {
-    console.log('Retrieved data: ', datadb);
+var fileText = document.querySelector(".fileText");
+var percentVal;
+var fileItem;
+var fileName;
 
-  }
-});
+function getFile(e) {
+  fileItem = e.target.files[0];
+  fileName = fileItem.name;
+  fileText.innerHTML = fileName;
+}
+
+
+
