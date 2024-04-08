@@ -147,7 +147,7 @@
                     <div class="bid_box">
                         <div class="bid">
                             <input type="number" id="newBid" placeholder="Enter Your Bid">
-                            <button type="submit" class="bid_button" onclick="placeBid()">Bid</button>
+                            <button type="submit" class="bid_button" id="manualInputButton" onclick="placeBid()">Bid</button>
 
                         </div>
                     </div>
@@ -159,6 +159,11 @@
         <div>
             <div class="menu" onclick="showDescription()">
                 <div class="name">Description</div>
+            </div>
+        </div>
+        <div>
+            <div class="menu" onclick="showGraph()">
+                <div class="name">Graph</div>
             </div>
         </div>
         <div>
@@ -177,7 +182,8 @@
             </div>
         </div>
     </div>
-    <div id="descriptionSection">
+
+    <div id="descriptionSection" >
         <div class="tab-description" id="text">
 
             <h2>Description</h2>
@@ -198,7 +204,12 @@
         </div>
         <!-- </div> -->
     </div>
-
+    <div id="graph" style="display: none;">
+        <div class="chart-container">
+            <canvas id="lineGraph"></canvas>
+            <!-- <div id="lastValue"></div> -->
+        </div>
+    </div>
     <div id="bidHistory" style="display: none;">
         <table id="bidTable">
             <thead>
@@ -397,11 +408,11 @@
     </div>
 
 </body>
-
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-database.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
 <script src="../styles/description.js"></script>
 <script src="../styles/script.js"></script>
-
+<script src="../styles/graph.js"></script>
 </html>

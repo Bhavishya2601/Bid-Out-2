@@ -172,25 +172,36 @@ let slideIndex = 1;
 
 
 // for description part
+function showGraph(){
+    document.getElementById('graph').style.display = 'block';
+    document.getElementById('descriptionSection').style.display = 'none';
+    document.getElementById('bidHistory').style.display = 'none';
+    document.getElementById('bidProduct').style.display = 'none';
+    document.getElementById('bidReview').style.display = 'none';
+}
 function showDescription() {
+    document.getElementById('graph').style.display = 'none';
     document.getElementById('descriptionSection').style.display = 'block';
     document.getElementById('bidHistory').style.display = 'none';
     document.getElementById('bidProduct').style.display = 'none';
     document.getElementById('bidReview').style.display = 'none';
 }
 function showHistory(){
+    document.getElementById('graph').style.display = 'none';
     document.getElementById('descriptionSection').style.display = 'none';
     document.getElementById('bidHistory').style.display = 'block';
     document.getElementById('bidProduct').style.display = 'none';
     document.getElementById('bidReview').style.display = 'none';
 }
 function showProducts() {
+    document.getElementById('graph').style.display = 'none';
     document.getElementById('descriptionSection').style.display = 'none';
     document.getElementById('bidHistory').style.display = 'none';
     document.getElementById('bidReview').style.display = 'none';
     document.getElementById('bidProduct').style.display = 'block';
 }
 function showReview(){
+    document.getElementById('graph').style.display = 'none';
     document.getElementById('descriptionSection').style.display = 'none';
     document.getElementById('bidHistory').style.display = 'none';
     document.getElementById('bidReview').style.display = 'block';
