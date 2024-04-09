@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
       document.getElementById('bidAmount').textContent = newDataValue;
 
       // Start updating the graph automatically every 20 seconds
-      interval = setInterval(updateGraph, 20000);
+      interval = setInterval(updateGraph, 2000);
     }
 
     // Event listener for manual data input button
@@ -87,7 +87,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to add data to the graph
     function addData(value) {
       // Add the value to the graph data
-      lineGraph.data.datasets[0].data.push(value);
+      var randomAddition = Math.floor(Math.random() * (2000 - 1500 + 1)) + 1500;
+      var newValue = value + randomAddition;
+
+      // Add the value to the graph data
+      lineGraph.data.datasets[0].data.push(newValue);
       lineGraph.data.labels.push(getCurrentTime()); // Add current time and date as label
       lineGraph.update(); // Update the chart
       // Display the last value
