@@ -55,12 +55,6 @@ function save(url) {
     return;
   }
 
-  // Check if  lowprice>expprice
-    if (lowprice > expprice) {
-        alert('Lowest Price should be greater then Expected Price.');
-        return;
-    }.
-
   // Save data to Firebase
   database.ref('users/' + username).set({
     pname: pname,
@@ -98,6 +92,3 @@ function getFile(e) {
   fileName = fileItem.name;
   fileText.innerHTML = fileName;
 }
-
-
-
