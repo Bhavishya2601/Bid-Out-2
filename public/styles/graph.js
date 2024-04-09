@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
       document.getElementById('bidAmount').textContent = newDataValue;
 
       // Start updating the graph automatically every 20 seconds
-      interval = setInterval(updateGraph, 2000);
+      interval = setInterval(updateGraph, 20000);
     }
 
     // Event listener for manual data input button
