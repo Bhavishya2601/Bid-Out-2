@@ -431,21 +431,7 @@
                 </div> -->
             
 
-                    <div id="displayData"></div>
-                
-                    <div class="a1">
-                        <div class="imgBox" id="pimage"><img id="productImage" src=""></div>
-                        <div class="a1_head" id="pname"></div>
-                        <div class="a1_description" id="pdesc"></div>
-                        <div class="a1_timer" id="timer"><p id="demo1"></p></div>
-                        <div class="a1_bid" id="first">
-                            <div>Current bid: Rs.<span id="price"></span></div>
-                            <div><button>Place your Bid</button></div>
-                        </div>
-                    </div>
-                    
-                    
-                    <div id="displayData"></div>
+                    <div id="displayData"></div> 
                     
                     
             </div>
@@ -559,23 +545,61 @@
 <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
 <script src="./selleradd.js"></script>
 <script>
+    // Function to create a card for each user
+    function createUserCard(user) {
+        const cardContainer = document.createElement('div');
+        cardContainer.className = 'userCard';
+
+        const imgBox = document.createElement('div');
+        imgBox.className = 'imgBox';
+        const productImage = document.createElement('img');
+        productImage.src = user.pimage;
+        imgBox.appendChild(productImage);
+
+        const a1Head = document.createElement('div');
+        a1Head.className = 'a1_head';
+        a1Head.textContent = user.pname;
+
+        const a1Description = document.createElement('div');
+        a1Description.className = 'a1_description';
+        a1Description.textContent = user.pdesc;
+
+        const a1Timer = document.createElement('div');
+        a1Timer.className = 'a1_timer';
+        const timerParagraph = document.createElement('p');
+        timerParagraph.id = 'demo1'; // Assuming you use this ID for timer, adjust accordingly if needed
+        a1Timer.appendChild(timerParagraph);
+
+        const a1Bid = document.createElement('div');
+        a1Bid.className = 'a1_bid';
+        const currentBid = document.createElement('div');
+        currentBid.textContent = 'Current bid: Rs.' + user.expprice;
+        const placeBidButton = document.createElement('button');
+        placeBidButton.textContent = 'Place your Bid';
+        a1Bid.appendChild(currentBid);
+        a1Bid.appendChild(placeBidButton);
+
+        cardContainer.appendChild(imgBox);
+        cardContainer.appendChild(a1Head);
+        cardContainer.appendChild(a1Description);
+        cardContainer.appendChild(a1Timer);
+        cardContainer.appendChild(a1Bid);
+
+        return cardContainer;
+    }
+
     // Display the data on the new page
     function displayData(userData) {
-    var displayDivName = document.getElementById('pname');
-    var displayDivPrice = document.getElementById('price');
-    var displayDivDesc = document.getElementById('pdesc');
-    var displayDivImg = document.getElementById('productImage');
+        var displayDiv = document.getElementById('displayData');
 
-    for (var key in userData.users) {
-        if (userData.users.hasOwnProperty(key)) {
-            var user = userData.users[key];
-            displayDivName.textContent = user.pname;
-            displayDivPrice.textContent = user.expprice;
-            displayDivDesc.textContent = user.pdesc;
-            displayDivImg.src = user.pimage; // Set image source
+        for (var key in userData.users) {
+            if (userData.users.hasOwnProperty(key)) {
+                var user = userData.users[key];
+                var userCard = createUserCard(user);
+                displayDiv.appendChild(userCard);
+            }
         }
     }
-}
 
     getAllDataFromRealtimeDatabase((err, datadb) => {
         if (err) {
