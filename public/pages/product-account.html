@@ -568,6 +568,7 @@
     for (var key in userData.users) {
         if (userData.users.hasOwnProperty(key)) {
             var user = userData.users[key];
+            var userString = "<p>User: " + key + "<br>Pdesc: " + user.pdesc + "<br>Pname: " + user.pname + "<br>Pimage: " + user.pimage + "<br>Low: " + user.lowprice + "<br>Expected Price: " + user.expprice + "</p>";
             displayDivName.textContent = user.pname;
             displayDivPrice.textContent = user.expprice;
             displayDivDesc.textContent = user.pdesc;
