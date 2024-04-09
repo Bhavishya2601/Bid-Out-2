@@ -22,6 +22,12 @@ header {
     top: 0;
 }
 
+.banner img{
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    margin-bottom: 30px;
+}
 .nav {
     display: flex;
     justify-content: space-between;
@@ -295,13 +301,16 @@ header {
     width: 100%;
     height: 150px;
 }
+.footer1, .footer2{
+    border-radius: 0;
+    font-family: inconsolata;
+}
 .footer1 {
-    margin-top: 300px;
+    margin-top: 50px;
     background-color: rgb(49, 50, 54);
     color: white;
     display: flex;
     justify-content: space-around;
-    font-family: inconsolata;
 }
 
 .foot1,

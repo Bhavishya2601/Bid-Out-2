@@ -69,8 +69,8 @@ document.addEventListener('DOMContentLoaded', function() {
       // Display the last value
       document.getElementById('bidAmount').textContent = newDataValue;
 
-      // Start updating the graph automatically every 5 seconds
-      interval = setInterval(updateGraph, 30000);
+      // Start updating the graph automatically every 20 seconds
+      interval = setInterval(updateGraph, 20000);
     }
 
     // Event listener for manual data input button
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to update the graph data
     function updateGraph() {
-      newDataValue -= 1000;
+      newDataValue -= 500;
       lineGraph.data.datasets[0].data.push(newDataValue);
       lineGraph.data.labels.push(getCurrentTime()); // Add current time and date as label
       lineGraph.update(); // Update the chart
