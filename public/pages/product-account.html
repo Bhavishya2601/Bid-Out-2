@@ -434,9 +434,9 @@
                     <div id="displayData"></div>
                 
                     <div class="a1">
-                        <div class="imgBox"><img src="https://bidout-wp.b-cdn.net/wp-content/uploads/2022/10/Image-15.jpg"></div>
-                        <div class="a1_head" id="pname">{user.pname}</div>
-                        <div class="a1_description" id="desciption"></div>
+                        <div class="imgBox" id="pimage"><img id="productImage" src=""></div>
+                        <div class="a1_head" id="pname"></div>
+                        <div class="a1_description" id="pdesc"></div>
                         <div class="a1_timer" id="timer"><p id="demo1"></p></div>
                         <div class="a1_bid" id="first">
                             <div>Current bid: Rs.<span id="price"></span></div>
@@ -559,20 +559,22 @@
 <script src="./selleradd.js"></script>
 <script>
     // Display the data on the new page
-    function displayData(userData) {
-        var displayDivName = document.getElementById('pname');
-        var displayDivPrice = document.getElementById('price');
-        var displayDivDesc = document.getElementById('description');
-        for (var key in userData.users) {
-            if (userData.users.hasOwnProperty(key)) {
-                var user = userData.users[key];
-                var userString = "<p>User: " + key + "<br>Pdesc: " + user.pdesc + "<br>Pname: " + user.pname + "<br>Pimage: " + user.pimage + "<br>Low: " + user.lowprice + "<br>Expected Price: " + user.expprice + "</p>";
-                displayDivName.innerHTML = user.pname;
-                displayDivPrice.innerHTML = user.expprice;
-                displayDivDesc.innerHTML = user.pdesc;
-            }
+    ffunction displayData(userData) {
+    var displayDivName = document.getElementById('pname');
+    var displayDivPrice = document.getElementById('price');
+    var displayDivDesc = document.getElementById('pdesc');
+    var displayDivImg = document.getElementById('productImage');
+
+    for (var key in userData.users) {
+        if (userData.users.hasOwnProperty(key)) {
+            var user = userData.users[key];
+            displayDivName.textContent = user.pname;
+            displayDivPrice.textContent = user.expprice;
+            displayDivDesc.textContent = user.pdesc;
+            displayDivImg.src = user.pimage; // Set image source
         }
     }
+}
 
     getAllDataFromRealtimeDatabase((err, datadb) => {
         if (err) {
