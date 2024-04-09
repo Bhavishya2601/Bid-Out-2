@@ -92,6 +92,3 @@ function getFile(e) {
   fileName = fileItem.name;
   fileText.innerHTML = fileName;
 }
-
-
-
